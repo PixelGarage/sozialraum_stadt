@@ -1,0 +1,63 @@
+/* --------------------------------------------------
+ * Pixelgarage fonts
+ * --------------------------------------------------*/
+//
+// Awesome icon font
+@import '../fonts/font-awesome/less/font-awesome';
+@fa-font-path: '@{pxl-font-path}/font-awesome/fonts'; // override fa font path (lazy loading)
+
+//
+// Define customer specific fonts
+@pxl-font-path: '../fonts';
+@pxl-bs-path: '../bootstrap';
+
+// icon font
+@pxl-icon-font: 'fontawesome';
+
+// title font
+@pxl-title-font: 'HalisGrotesqueBold', sans-serif;
+
+// text fonts
+@pxl-text-font: 'HalisGrotesqueRegular', sans-serif;
+@pxl-text-font-light: 'HalisGrotesqueLight', sans-serif;
+@pxl-text-font-medium: 'HalisGrotesqueRegular', sans-serif;
+@pxl-text-font-bold: 'HalisGrotesqueBold', sans-serif;
+@pxl-text-font-italics: 'HalisGrotesqueRegular', sans-serif;
+@pxl-text-font-light-italics: 'HalisGrotesqueLight', sans-serif;
+@pxl-text-font-bold-italics: 'HalisGrotesqueBold', sans-serif;
+
+// overrides
+@font-family-base: @pxl-text-font;
+
+// form font
+@pxl-form-font: @pxl-text-font;
+
+//
+// font faces
+@font-face {
+  font-family: 'HalisGrotesqueRegular';
+  src: url('@{pxl-font-path}/HalisGrotesqueRegular/HalisGrotesqueRegular.eot');
+  src: url('@{pxl-font-path}/HalisGrotesqueRegular/HalisGrotesqueRegular.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/HalisGrotesqueRegular/HalisGrotesqueRegular.woff2') format('woff2'),
+  url('@{pxl-font-path}/HalisGrotesqueRegular/HalisGrotesqueRegular.woff') format('woff'),
+  url('@{pxl-font-path}/HalisGrotesqueRegular/HalisGrotesqueRegular.ttf') format('truetype'),
+  url('@{pxl-font-path}/HalisGrotesqueRegular/HalisGrotesqueRegular.svg#HalisGrotesqueRegular') format('svg');
+}
+@font-face {
+  font-family: 'HalisGrotesqueBold';
+  src: url('@{pxl-font-path}/HalisGrotesqueBold/HalisGrotesqueBold.eot');
+  src: url('@{pxl-font-path}/HalisGrotesqueBold/HalisGrotesqueBold.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/HalisGrotesqueBold/HalisGrotesqueBold.woff2') format('woff2'),
+  url('@{pxl-font-path}/HalisGrotesqueBold/HalisGrotesqueBold.woff') format('woff'),
+  url('@{pxl-font-path}/HalisGrotesqueBold/HalisGrotesqueBold.ttf') format('truetype'),
+  url('@{pxl-font-path}/HalisGrotesqueBold/HalisGrotesqueBold.svg#HalisGrotesqueBold') format('svg');
+}
+@font-face {
+  font-family: 'HalisGrotesqueLight';
+  src: url('@{pxl-font-path}/HalisGrotesqueLight/HalisGrotesqueLight.eot');
+  src: url('@{pxl-font-path}/HalisGrotesqueLight/HalisGrotesqueLight.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/HalisGrotesqueLight/HalisGrotesqueLight.woff2') format('woff2'),
+  url('@{pxl-font-path}/HalisGrotesqueLight/HalisGrotesqueLight.woff') format('woff'),
+  url('@{pxl-font-path}/HalisGrotesqueLight/HalisGrotesqueLight.ttf') format('truetype'),
+  url('@{pxl-font-path}/HalisGrotesqueLight/HalisGrotesqueLight.svg#HalisGrotesqueLight') format('svg');
+}

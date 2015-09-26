@@ -1,0 +1,54 @@
+/*
+ *  Content section (main content)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+
+.container {
+  // all container with background
+  background-color: #fff;
+
+  a {
+    outline: none;
+
+    &.active, &:hover, &:focus {
+      outline: none;
+    }
+  }
+
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  background: transparent url(../images/background.jpg) no-repeat top center / cover;
+
+  .main-container {
+    #page-header {
+      .region-header {
+        // block title
+        h2.block-title {
+          margin: 20px 0 10px;
+          font-family: @pxl-text-font;
+          font-size: @font-size-larger;
+        }
+
+      }
+    }
+  }
+
+}

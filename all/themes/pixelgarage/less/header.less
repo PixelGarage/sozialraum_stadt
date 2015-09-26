@@ -1,0 +1,159 @@
+/*
+ *  Header section (navigation)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-menu-height: 50px;
+@pxl-navi-site-height: 100px;
+@pxl-navi-site-height-small: 40px;
+
+@pxl-navi-margin: 20px;
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+body.navbar-is-fixed-top {
+  padding-top: 110px !important;
+
+  &.admin-menu {
+    padding-top: 110px !important;
+  }
+
+}
+
+header#navbar {
+  border-bottom: none;
+  background: transparent none;
+
+  .container {
+    padding: 0;
+    background: transparent none;
+
+    .navbar-header {
+      float: none;
+
+      .region-navigation {
+        margin: @pxl-navi-margin 0;
+
+        #block-system-main-menu {
+          ul.menu {
+            display: block;
+            text-align: justify;
+
+            li {
+              display: inline-block;
+              margin: 0 -2px;
+              padding: 0 10px 0 0;
+              width: 33.3333333%;
+
+              &:last-child {
+                padding-right: 0;
+              }
+
+              a {
+                padding: 0 (@pxl-menu-height - 17px) / 2;
+                width: 100%;
+                height: 100%;
+                font-family: @pxl-text-font-bold;
+                font-size: 3vw;
+                color: #fff;
+                line-height: @pxl-menu-height;
+                //letter-spacing: 0.2px;
+                text-align: center;
+                background-color: @pxl-color-blau;
+                outline: none;
+
+                &.active, &:hover, &:focus {
+                  color: @pxl-color-braun;
+                  background-color: @pxl-color-pfirsich;
+                  outline: none;
+                }
+
+                @media @tablet {
+                  font-size: 17px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .navbar-site {
+        margin: 0 auto;
+        padding: @grid-gutter-width/2;
+        height: @pxl-navi-site-height-small;
+        background-color: #fff;
+
+        a.site-name {
+          float: none;
+          margin: 0;
+          padding: 0;
+          height: auto;
+          font-family: @pxl-text-font-bold;
+          font-size: 3vw;
+          color: @pxl-color-blau;
+          line-height: 1.2;
+          //letter-spacing: 0.2px;
+          text-transform: uppercase;
+
+          @media @tablet {
+            font-size: 17px;
+          }
+        }
+
+        .site-lead {
+          padding: 0;
+          font-family: @pxl-text-font;
+          font-size: 3vw;
+          color: @pxl-color-blau;
+          line-height: 1.2;
+          //letter-spacing: 0.2px;
+          text-transform: uppercase;
+
+          @media @tablet {
+            font-size: 17px;
+          }
+        }
+
+        body.page-node-18 & {
+          height: @pxl-navi-site-height;
+
+          a.site-name {
+            font-size: @resp-font-size-large;
+            line-height: 1;
+            text-decoration: underline;
+
+            @media @tablet {
+              font-size: 30px;
+            }
+          }
+
+          .site-lead {
+            font-family: @pxl-text-font;
+            font-size: @resp-font-size;
+
+            @media @tablet {
+              font-size: 25px;
+            }
+          }
+        }
+
+      }
+
+      button.navbar-toggle {
+        display: none;
+      }
+    }
+
+    .navbar-collapse {
+      display: none;
+    }
+  }
+}
+
