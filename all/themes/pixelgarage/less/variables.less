@@ -59,9 +59,9 @@
 @font-size-small:         ceil((@font-size-base * 0.85));
 @font-size-smaller:       ceil((@font-size-base * 0.7));
 
-@resp-font-size:          4.16vw;
-@resp-font-size-min:      11px;
-@resp-font-size-max:      21px;
+@resp-font-size:          2.8vw;
+@resp-font-size-min:      12px;
+@resp-font-size-max:      17px;
 @resp-font-size-large:    5vw;
 @resp-font-size-large-min:20px;
 @resp-font-size-large-max:30px;
@@ -150,7 +150,7 @@
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
 
-@pxl-container-width:        (600px - @grid-gutter-width);
+@pxl-container-width:        600px;
 
 // Extra small screen / phone
 //** Deprecated `@screen-xs` as of v3.0.1
@@ -162,7 +162,7 @@
 
 // Small screen / tablet
 //** Deprecated `@screen-sm` as of v3.0.1
-@screen-sm:                  (@pxl-container-width + 2 * @grid-gutter-width);
+@screen-sm:                  (@pxl-container-width + @grid-gutter-width);
 @screen-sm-min:              @screen-sm;
 //** Deprecated `@screen-tablet` as of v3.0.1
 @screen-tablet:              @screen-sm-min;
@@ -225,17 +225,17 @@
 //## Define the maximum width of `.container` for different screen sizes.
 
 // Small screen / tablet
-@container-tablet:             (@pxl-container-width + @grid-gutter-width);
+@container-tablet:             @pxl-container-width;
 //** For `@screen-sm-min` and up.
 @container-sm:                 @container-tablet;
 
 // Medium screen / desktop
-@container-desktop:            (@pxl-container-width + @grid-gutter-width);
+@container-desktop:            @pxl-container-width;
 //** For `@screen-md-min` and up.
 @container-md:                 @container-desktop;
 
 // Large screen / wide desktop
-@container-large-desktop:      (@pxl-container-width + @grid-gutter-width);
+@container-large-desktop:      @pxl-container-width;
 //** For `@screen-lg-min` and up.
 @container-lg:                 @container-large-desktop;
 

@@ -38,7 +38,13 @@
     -moz-box-sizing: @size;
     box-sizing: @size;
   }
-  // centers an element vertically in its container (block with height)
+  // centers an element horizontally/vertically in its container (block with height)
+  .center-horizontally {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
   .center-vertically {
     position: relative;
     top: 50%;

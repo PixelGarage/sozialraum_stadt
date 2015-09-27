@@ -4,7 +4,8 @@
 
 // Variables
 // -------------------------
-
+@pxl-footer-margin-bottom: 50px;
+@pxl-footer-height: (60px + @pxl-footer-margin-bottom);
 
 // Mixins
 // -------------------------
@@ -14,8 +15,12 @@
 // Main settings
 // -------------------------
 footer.container {
+  position: absolute;
+  bottom: @pxl-footer-margin-bottom;
+  left: 0;
+  right: 0;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0;
   border: none;
   background-color: transparent;
 

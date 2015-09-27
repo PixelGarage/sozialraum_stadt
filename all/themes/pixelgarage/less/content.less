@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-
+@pxl-content-margin-tb: 20px;
 
 // Mixins
 // -------------------------
@@ -35,20 +35,72 @@ html {
 body {
   position: relative;
   height: 100%;
+  min-height: 480px;
+  overflow-y: hidden;
   background: transparent url(../images/background.jpg) no-repeat top center / cover;
 
   .main-container {
-    #page-header {
-      .region-header {
-        // block title
-        h2.block-title {
-          margin: 20px 0 10px;
-          font-family: @pxl-text-font;
-          font-size: @font-size-larger;
+    position: absolute;
+    overflow-y: auto;
+    top: (@pxl-header-height-small + @pxl-content-margin-tb);
+    bottom: (@pxl-footer-height + @pxl-content-margin-tb);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 95%;
+    max-width: @pxl-container-width;
+
+    @media @tablet {
+      top: @pxl-header-height-small + @pxl-navi-margin-top + @pxl-content-margin-tb;
+      width: 100%;
+    }
+
+    //
+    // admin tabs and action links
+    div.row {
+      section { // column(s)
+        ul.nav-tabs {
+          margin-bottom: 5px;
+          li {
+            float: right;
+            a {
+              padding: 5px 10px;
+              font-family: @font-family-monospace;
+              font-size: @font-size-small;
+              border-radius: 0;
+            }
+          }
+        }
+        ul.action-links {
+          margin: 0;
+          li {
+            float: right;
+            a {
+              font-family: @font-family-monospace;
+              font-size: @font-size-small;
+            }
+          }
         }
 
+      } // section
+
+      //
+      // main content region
+      .region-content {
+        #block-system-main {
+          padding: @grid-gutter-width 10px;
+        }
       }
     }
-  }
 
+  } // main-container
+
+}
+
+@media @tablet {
+  // main page with higher brand box
+  body.page-node-18 .main-container {
+    top: @pxl-header-height + @pxl-content-margin-tb;
+  }
 }

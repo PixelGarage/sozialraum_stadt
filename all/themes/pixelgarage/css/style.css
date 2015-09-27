@@ -8564,6 +8564,12 @@ div.features-export-list .form-type-checkbox input[type=checkbox] {
  * }
  *
  * --------------------------------------------------*/
+#pxl-mixins .center-horizontally {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 #pxl-mixins .center-vertically {
   position: relative;
   top: 50%;
@@ -8602,7 +8608,7 @@ form#user-login {
 @media screen and (min-width: 992px) {
   #user-create-account {
     padding: 2em;
-    width: 50%;
+    width: 100%;
   }
 }
 #user-create-account .form-actions-wrapper {
@@ -8647,7 +8653,7 @@ form#user-login {
 @media screen and (min-width: 992px) {
   #user_login_form {
     padding: 2em;
-    width: 50%;
+    width: 100%;
     border: 0;
     border-right: 1px solid #eeeeee;
   }
@@ -8937,205 +8943,259 @@ form#user-login {
 /*
  *  Node / block webform component
  * --------------------------------------------------*/
-.node-webform div.col-sm-12 {
+.node-page.view-mode-anmeldung div.col-sm-12 {
   width: 100%;
 }
-@media screen and (min-width: 992px) {
-  .node-webform div.col-sm-12 {
-    width: 70%;
-  }
+.node-page.view-mode-anmeldung div.col-sm-12 .field-name-title {
+  display: none;
 }
-.node-webform div.col-sm-12 .field-name-title h2 {
-  font-family: 'HalisGrotesqueBold', sans-serif;
-  font-size: 20px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: #0054bf;
-}
-@media screen and (max-width: 629px) {
-  .node-webform div.col-sm-12 .field-name-title h2 {
-    font-size: 5vw;
-  }
-}
-@media screen and (min-width: 630px) {
-  .node-webform div.col-sm-12 .field-name-title h2 {
-    font-size: 30px;
-  }
-}
-.node-webform div.col-sm-12 form.webform-client-form {
-  margin-top: 20px;
-}
-.node-webform div.col-sm-12 form.webform-client-form .webform-component {
-  margin: 0 auto 30px;
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component {
+  margin: 0 auto 0.8em;
   padding: 0;
   max-width: 100%;
   background-color: #fff;
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component label {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label {
+  padding: 0;
   width: auto;
-  font-family: 'HalisGrotesqueRegular', sans-serif;
-  font-size: 11px;
-  letter-spacing: 1.2px;
+  font-family: 'HalisGrotesqueBold', sans-serif;
+  font-size: 12px;
+  line-height: 1.5em;
   text-align: left;
   text-transform: uppercase;
-  color: #333333;
+  color: #193444;
 }
 @media screen and (max-width: 629px) {
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component label {
-    font-size: 4.16vw;
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label {
+    font-size: 2.8vw;
   }
 }
 @media screen and (min-width: 630px) {
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component label {
-    font-size: 21px;
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label {
+    font-size: 17px;
   }
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component label span.form-required {
-  color: #0054bf;
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label span.form-required {
+  color: #193444;
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component div.description {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component div.description {
   display: block;
   margin: 10px 0 0;
   font-family: 'HalisGrotesqueRegular', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component input,
-.node-webform div.col-sm-12 form.webform-client-form .webform-component textarea {
-  height: auto;
-  font-family: 'HalisGrotesqueRegular', sans-serif;
-  font-size: 11px;
-  letter-spacing: 1.1px;
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component input,
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component textarea {
+  padding: 0 10px;
+  height: 100%;
+  font-family: 'HalisGrotesqueLight', sans-serif;
+  font-size: 12px;
+  line-height: 1.5em;
   text-align: left;
-  color: #0054bf;
+  color: #193444;
   box-shadow: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #dddddd;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid transparent;
+  background-color: #eeeeee;
 }
 @media screen and (max-width: 629px) {
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component input,
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component textarea {
-    font-size: 4.16vw;
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component input,
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component textarea {
+    font-size: 2.8vw;
   }
 }
 @media screen and (min-width: 630px) {
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component input,
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component textarea {
-    font-size: 21px;
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component input,
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component textarea {
+    font-size: 17px;
   }
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component input:focus,
-.node-webform div.col-sm-12 form.webform-client-form .webform-component textarea:focus {
-  border: 1px solid #3fa9e5;
-  -webkit-box-shadow: 0 0 3px #0054bf;
-  box-shadow: 0 0 3px #0054bf;
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component input:focus,
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component textarea:focus {
+  border: 1px solid #193444;
+  -webkit-box-shadow: 0 0 3px transparent;
+  box-shadow: 0 0 3px transparent;
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component .form-textarea-wrapper div.grippie {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-textarea-wrapper div.grippie {
   display: none;
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component select {
+  width: 95%;
+  font-family: 'HalisGrotesqueLight', sans-serif;
+  font-size: 10px;
+  line-height: 1em;
+  text-align: left;
+  color: #193444;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid transparent;
+  background-color: #eeeeee;
+  outline: none;
+}
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component select#edit-submitted-prioritaet-2 {
+  width: 100%;
+}
+@media screen and (max-width: 629px) {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component select {
+    font-size: 2.6vw;
+  }
+}
+@media screen and (min-width: 630px) {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component select {
+    font-size: 15px;
+  }
+}
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component select:focus,
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component select:active {
+  outline: none;
+}
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-managed-file {
   display: inline-block;
   position: absolute;
   right: 0;
   overflow-x: auto;
-  width: 72%;
+  width: 58.333333%;
   white-space: nowrap;
-  border: 1px solid #dddddd;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  border: 1px solid transparent;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file input {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-managed-file input {
   position: relative;
   float: none;
   padding: 0.3em;
   width: 80%;
   text-align: left;
   border: none;
+  background-color: #eeeeee;
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn {
   display: inline-block;
   margin: 0;
   padding: 0.5em 1em;
   font-family: 'HalisGrotesqueBold', sans-serif;
-  font-size: 4.16vw;
+  font-size: 2.8vw;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #823444;
   outline: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #0049a6;
-  background-color: #0054bf;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: #f59878;
   margin: 0 1%;
   vertical-align: baseline;
 }
 @media screen and (min-width: 630px) {
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn {
     font-size: 17px;
   }
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn:hover,
-.node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn:focus {
-  color: #0054bf;
-  background: none;
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn:hover,
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn:focus {
+  color: #f59878;
+  background: #823444;
 }
 @media screen and (max-width: 629px) {
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file input {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-managed-file input {
     width: 60%;
     font-size: 2.1vw;
   }
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-managed-file button.btn {
     padding: 0.3em 1em;
   }
 }
 @media screen and (min-width: 630px) {
-  .node-webform div.col-sm-12 form.webform-client-form .webform-component .form-managed-file input {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-managed-file input {
     width: 68%;
     font-size: 16px;
   }
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup h2 {
+  font-family: 'HalisGrotesqueBold', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1em;
+  text-align: left;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 629px) {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup h2 {
+    font-size: 2.8vw;
+  }
+}
+@media screen and (min-width: 630px) {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup h2 {
+    font-size: 17px;
+  }
+}
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup p {
+  font-family: 'HalisGrotesqueLight', sans-serif;
+  font-size: 10px;
+  line-height: 1em;
+  text-align: left;
+  color: #193444;
+}
+@media screen and (max-width: 629px) {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup p {
+    font-size: 2.6vw;
+  }
+}
+@media screen and (min-width: 630px) {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup p {
+    font-size: 15px;
+  }
+}
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-select {
+  display: inline-block;
+  margin: 0 -2px 20px;
+  width: 50%;
+}
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline {
   position: relative;
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline label,
-.node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline input {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline label,
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline input {
   display: inline-block;
 }
-.node-webform div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline input.form-text {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline input.form-text {
   position: absolute;
   right: 0;
-  width: 72%;
+  width: 58.333333%;
 }
-.node-webform div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit {
+  float: right;
   display: inline-block;
   margin: 0;
   padding: 0.5em 1em;
   font-family: 'HalisGrotesqueBold', sans-serif;
-  font-size: 4.16vw;
+  font-size: 2.8vw;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #823444;
   outline: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #0049a6;
-  background-color: #0054bf;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: #f59878;
 }
 @media screen and (min-width: 630px) {
-  .node-webform div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit {
     font-size: 17px;
   }
 }
-.node-webform div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit:hover,
-.node-webform div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit:focus {
-  color: #0054bf;
-  background: none;
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit:hover,
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit:focus {
+  color: #f59878;
+  background: #823444;
 }
 /*
  *  Node page component
@@ -9205,26 +9265,6 @@ form#user-login {
   max-width: 100%;
   height: auto;
 }
-@media screen and (min-width: 992px) {
-  .node-page div.col-sm-12 .field-name-body {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .node-page div.col-sm-12 .field-name-body {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-  }
-}
 /*
  *  Header section (navigation)
  * --------------------------------------------------*/
@@ -9233,6 +9273,20 @@ body.navbar-is-fixed-top {
 }
 body.navbar-is-fixed-top.admin-menu {
   padding-top: 110px !important;
+}
+@media screen and (min-width: 630px) {
+  body.navbar-is-fixed-top {
+    padding-top: 130px !important;
+  }
+  body.navbar-is-fixed-top.admin-menu {
+    padding-top: 130px !important;
+  }
+  body.page-node-18 body.navbar-is-fixed-top {
+    padding-top: 190px !important;
+  }
+  body.page-node-18 body.navbar-is-fixed-top.admin-menu {
+    padding-top: 190px !important;
+  }
 }
 header#navbar {
   border-bottom: none;
@@ -9246,7 +9300,7 @@ header#navbar .container .navbar-header {
   float: none;
 }
 header#navbar .container .navbar-header .region-navigation {
-  margin: 20px 0;
+  margin: 20px 0 0;
 }
 header#navbar .container .navbar-header .region-navigation #block-system-main-menu ul.menu {
   display: block;
@@ -9270,6 +9324,7 @@ header#navbar .container .navbar-header .region-navigation #block-system-main-me
   color: #fff;
   line-height: 50px;
   text-align: center;
+  text-transform: uppercase;
   background-color: #193444;
   outline: none;
 }
@@ -9286,60 +9341,67 @@ header#navbar .container .navbar-header .region-navigation #block-system-main-me
   }
 }
 header#navbar .container .navbar-header .navbar-site {
-  margin: 0 auto;
-  padding: 15px;
+  margin: 0;
+  padding: 0 30px;
   height: 40px;
+  white-space: nowrap;
   background-color: #fff;
 }
 header#navbar .container .navbar-header .navbar-site a.site-name {
+  display: inline-block;
   float: none;
   margin: 0;
   padding: 0;
   height: auto;
   font-family: 'HalisGrotesqueBold', sans-serif;
-  font-size: 3vw;
+  font-size: 2.8vw;
   color: #193444;
-  line-height: 1.2;
+  line-height: 40px;
   text-transform: uppercase;
 }
+header#navbar .container .navbar-header .navbar-site .site-lead {
+  display: inline-block;
+  margin: 0 0 0 -4px;
+  padding: 0;
+  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-size: 2.8vw;
+  color: #193444;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+header#navbar .container .navbar-header .navbar-site .site-lead:before {
+  content: "-";
+  padding: 0 0.3vw;
+}
 @media screen and (min-width: 630px) {
+  header#navbar .container .navbar-header .navbar-site {
+    margin: 20px 0 0;
+    padding: 0 15px;
+  }
   header#navbar .container .navbar-header .navbar-site a.site-name {
     font-size: 17px;
   }
-}
-header#navbar .container .navbar-header .navbar-site .site-lead {
-  padding: 0;
-  font-family: 'HalisGrotesqueRegular', sans-serif;
-  font-size: 3vw;
-  color: #193444;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 630px) {
   header#navbar .container .navbar-header .navbar-site .site-lead {
     font-size: 17px;
   }
-}
-body.page-node-18 header#navbar .container .navbar-header .navbar-site {
-  height: 100px;
-}
-body.page-node-18 header#navbar .container .navbar-header .navbar-site a.site-name {
-  font-size: 5vw;
-  line-height: 1;
-  text-decoration: underline;
-}
-@media screen and (min-width: 630px) {
-  body.page-node-18 header#navbar .container .navbar-header .navbar-site a.site-name {
-    font-size: 30px;
+  body.page-node-18 header#navbar .container .navbar-header .navbar-site {
+    padding: 10px 15px;
+    height: 100px;
+    white-space: normal;
   }
-}
-body.page-node-18 header#navbar .container .navbar-header .navbar-site .site-lead {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
-  font-size: 4.16vw;
-}
-@media screen and (min-width: 630px) {
+  body.page-node-18 header#navbar .container .navbar-header .navbar-site a.site-name {
+    display: block;
+    font-size: 30px;
+    text-decoration: underline;
+  }
   body.page-node-18 header#navbar .container .navbar-header .navbar-site .site-lead {
+    display: block;
+    margin: 0;
     font-size: 25px;
+  }
+  body.page-node-18 header#navbar .container .navbar-header .navbar-site .site-lead:before {
+    content: "";
+    padding: 0;
   }
 }
 header#navbar .container .navbar-header button.navbar-toggle {
@@ -9368,19 +9430,68 @@ html {
 body {
   position: relative;
   height: 100%;
+  min-height: 480px;
+  overflow-y: hidden;
   background: transparent url(../images/background.jpg) no-repeat top center / cover;
 }
-body .main-container #page-header .region-header h2.block-title {
-  margin: 20px 0 10px;
-  font-family: 'HalisGrotesqueRegular', sans-serif;
-  font-size: 24px;
+body .main-container {
+  position: absolute;
+  overflow-y: auto;
+  top: 130px;
+  bottom: 130px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0;
+  width: 95%;
+  max-width: 600px;
+}
+@media screen and (min-width: 630px) {
+  body .main-container {
+    top: 150px;
+    width: 100%;
+  }
+}
+body .main-container div.row section ul.nav-tabs {
+  margin-bottom: 5px;
+}
+body .main-container div.row section ul.nav-tabs li {
+  float: right;
+}
+body .main-container div.row section ul.nav-tabs li a {
+  padding: 5px 10px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  border-radius: 0;
+}
+body .main-container div.row section ul.action-links {
+  margin: 0;
+}
+body .main-container div.row section ul.action-links li {
+  float: right;
+}
+body .main-container div.row section ul.action-links li a {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+}
+body .main-container div.row .region-content #block-system-main {
+  padding: 30px 10px;
+}
+@media screen and (min-width: 630px) {
+  body.page-node-18 .main-container {
+    top: 210px;
+  }
 }
 /*
  *  Footer container
  * --------------------------------------------------*/
 footer.container {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0;
   border: none;
   background-color: transparent;
 }
