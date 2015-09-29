@@ -36,14 +36,14 @@
 
         &.collapsed {
           span {
-            &.tagungs-thema-title {
+            &.tagungs-thema-title.expandable {
               &:before {
                 display: inline-block;
                 content: '\f105';
                 font-family: 'fontawesome';
               }
             }
-            &.tagungs-thema-title:hover:before {
+            &.tagungs-thema-title.expandable:hover:before {
               display: inline-block;
               content: '\f107';
               font-family: 'fontawesome';
@@ -64,6 +64,10 @@
           }
 
           &.tagungs-thema-title {
+            width: (@second-column-width+@icon-width);
+          }
+
+          &.tagungs-thema-title.expandable {
             width: @second-column-width;
             &:before {
               display: inline-block;

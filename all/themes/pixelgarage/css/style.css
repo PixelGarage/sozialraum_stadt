@@ -1060,7 +1060,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 17px;
   line-height: 1.42857143;
   color: #193444;
@@ -5798,7 +5798,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 15px;
   font-weight: normal;
   line-height: 1.4;
@@ -5905,7 +5905,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 17px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -8611,21 +8611,40 @@ form#user-login {
     width: 100%;
   }
 }
+#user-create-account .form-item input.form-text {
+  font-family: 'HalisGrotesqueLight', sans-serif;
+  font-size: 13px;
+  line-height: 1.5em;
+  text-align: left;
+  color: #193444;
+  box-shadow: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: #eee;
+}
+@media screen and (min-width: 480px) {
+  #user-create-account .form-item input.form-text {
+    font-size: 2.83333333vw;
+  }
+}
+@media screen and (min-width: 630px) {
+  #user-create-account .form-item input.form-text {
+    font-size: 17px;
+  }
+}
 #user-create-account .form-actions-wrapper {
   position: relative;
   padding: 1em 0 0;
 }
 #user-create-account .login-register {
   border: none;
-  color: #ffffff;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
-  border-radius: 0.25em;
-  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
+  color: #823444;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: #f59878;
   display: inline-block;
   position: absolute;
   right: 0;
@@ -8633,12 +8652,8 @@ form#user-login {
   margin: 0;
 }
 #user-create-account .login-register:hover {
-  color: #ffffff;
-  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
+  color: #f59878;
+  background-color: #823444;
   text-decoration: none;
 }
 /* user login form */
@@ -8658,6 +8673,29 @@ form#user-login {
     border-right: 1px solid #eeeeee;
   }
 }
+#user_login_form .form-item input.form-text {
+  font-family: 'HalisGrotesqueLight', sans-serif;
+  font-size: 13px;
+  line-height: 1.5em;
+  text-align: left;
+  color: #193444;
+  box-shadow: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: #eee;
+}
+@media screen and (min-width: 480px) {
+  #user_login_form .form-item input.form-text {
+    font-size: 2.83333333vw;
+  }
+}
+@media screen and (min-width: 630px) {
+  #user_login_form .form-item input.form-text {
+    font-size: 17px;
+  }
+}
 #user_login_form .form-actions-wrapper {
   position: relative;
   padding: 1em 0 0;
@@ -8671,43 +8709,24 @@ form#user-login {
 }
 #user_login_form .form-actions-wrapper .form-actions .btn {
   border: none;
-  color: #ffffff;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
-  border-radius: 0.25em;
-  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
-  background-image: -webkit-linear-gradient(top, #2698f2 0%, #0a62a8 100%);
-  background-image: -o-linear-gradient(top, #2698f2 0%, #0a62a8 100%);
-  background-image: linear-gradient(to bottom, #2698f2 0%, #0a62a8 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2698f2', endColorstr='#ff0a62a8', GradientType=0);
+  color: #823444;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: #f59878;
 }
 #user_login_form .form-actions-wrapper .form-actions .btn:hover {
-  color: #ffffff;
-  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
+  color: #f59878;
+  background-color: #823444;
   text-decoration: none;
-}
-#user_login_form .form-actions-wrapper .form-actions .btn:hover {
-  background-image: -webkit-linear-gradient(top, #0a62a8 0%, #2698f2 100%);
-  background-image: -o-linear-gradient(top, #0a62a8 0%, #2698f2 100%);
-  background-image: linear-gradient(to bottom, #0a62a8 0%, #2698f2 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0a62a8', endColorstr='#ff2698f2', GradientType=0);
 }
 #user_login_form .form-actions-wrapper .login-password {
   display: inline-block;
   margin: 0.5em 0;
-  color: #2698f2;
+  color: #193444;
 }
 #user_login_form .form-actions-wrapper .login-password:hover {
-  color: #2698f2;
+  color: #823444;
   text-decoration: underline;
 }
 /* User register / password forms */
@@ -8717,6 +8736,32 @@ form#user-login {
   max-width: 40em;
   vertical-align: top;
   margin: 1em 0;
+}
+#user-register-form .form-item input.form-text,
+#user-pass .form-item input.form-text {
+  font-family: 'HalisGrotesqueLight', sans-serif;
+  font-size: 13px;
+  line-height: 1.5em;
+  text-align: left;
+  color: #193444;
+  box-shadow: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: #eee;
+}
+@media screen and (min-width: 480px) {
+  #user-register-form .form-item input.form-text,
+  #user-pass .form-item input.form-text {
+    font-size: 2.83333333vw;
+  }
+}
+@media screen and (min-width: 630px) {
+  #user-register-form .form-item input.form-text,
+  #user-pass .form-item input.form-text {
+    font-size: 17px;
+  }
 }
 #user-register-form .form-actions,
 #user-pass .form-actions {
@@ -8731,11 +8776,11 @@ form#user-login {
 #user-pass .form-actions .back-to-login .login-account {
   display: inline-block;
   margin-top: 0.5em;
-  color: #2698f2;
+  color: #193444;
 }
 #user-register-form .form-actions .back-to-login .login-account:hover,
 #user-pass .form-actions .back-to-login .login-account:hover {
-  color: #2698f2;
+  color: #823444;
   text-decoration: underline;
 }
 #user-register-form .form-actions .back-to-login:before,
@@ -8743,32 +8788,24 @@ form#user-login {
   display: inline;
   font-family: "fontawesome";
   content: '\f112';
-  color: #2698f2;
+  color: #193444;
   text-align: center;
   padding: 0.3em;
 }
 #user-register-form .form-actions .btn,
 #user-pass .form-actions .btn {
   border: none;
-  color: #ffffff;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
-  border-radius: 0.25em;
-  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
+  color: #823444;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: #f59878;
   float: right;
 }
 #user-register-form .form-actions .btn:hover,
 #user-pass .form-actions .btn:hover {
-  color: #ffffff;
-  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
+  color: #f59878;
+  background-color: #823444;
   text-decoration: none;
 }
 /*
@@ -8901,7 +8938,7 @@ form#user-login {
  * --------------------------------------------------*/
 #block-locale-language {
   display: inline-block;
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 17px;
 }
 #block-locale-language ul.language-switcher-locale-url {
@@ -8982,7 +9019,7 @@ form#user-login {
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component div.description {
   display: block;
   margin: 10px 0 0;
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 13px;
 }
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component input,
@@ -9218,7 +9255,7 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-body h4,
 .node-page div.col-sm-12 .field-name-body h5,
 .node-page div.col-sm-12 .field-name-body h6 {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 13px;
 }
 @media screen and (min-width: 480px) {
@@ -9262,7 +9299,7 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-body p,
 .node-page div.col-sm-12 .field-name-body tbody td {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 13px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -9347,12 +9384,12 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle:hover {
   text-decoration: none;
 }
-.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title:before {
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:before {
   display: inline-block;
   content: '\f105';
   font-family: 'fontawesome';
 }
-.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title:hover:before {
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:hover:before {
   display: inline-block;
   content: '\f107';
   font-family: 'fontawesome';
@@ -9375,9 +9412,12 @@ form#user-login {
   text-align: left;
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title {
+  width: 85%;
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable {
   width: 82%;
 }
-.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title:before {
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable:before {
   display: inline-block;
   content: '\f107';
   font-family: 'fontawesome';
@@ -9394,7 +9434,7 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body h4,
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body h5,
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body h6 {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 13px;
 }
 @media screen and (min-width: 480px) {
@@ -9438,7 +9478,7 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body p,
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body tbody td {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 13px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -9546,12 +9586,12 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle:hover {
   text-decoration: none;
 }
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title:before {
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:before {
   display: inline-block;
   content: '\f105';
   font-family: 'fontawesome';
 }
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title:hover:before {
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:hover:before {
   display: inline-block;
   content: '\f107';
   font-family: 'fontawesome';
@@ -9574,9 +9614,12 @@ form#user-login {
   text-align: left;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title {
+  width: 100%;
+}
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable {
   width: 97%;
 }
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title:before {
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable:before {
   display: inline-block;
   content: '\f107';
   font-family: 'fontawesome';
@@ -9593,7 +9636,7 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body h4,
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body h5,
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body h6 {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 13px;
 }
 @media screen and (min-width: 480px) {
@@ -9637,7 +9680,7 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body p,
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body tbody td {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 13px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -9803,7 +9846,7 @@ header#navbar .container .navbar-header .navbar-site .site-lead {
   display: inline-block;
   margin: 0 0 0 -4px;
   padding: 0;
-  font-family: 'HalisGrotesqueRegular', sans-serif;
+  font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 2.8vw;
   color: #193444;
   line-height: 40px;
@@ -9885,7 +9928,6 @@ body.page-node-21 {
 }
 body .main-container {
   position: absolute;
-  overflow-y: auto;
   top: 110px;
   bottom: 50px;
   left: 0;
@@ -9894,6 +9936,7 @@ body .main-container {
   padding: 0;
   width: 95%;
   max-width: 600px;
+  background-color: #fff;
 }
 @media screen and (min-width: 630px) {
   body .main-container {
@@ -9901,36 +9944,79 @@ body .main-container {
     width: 100%;
   }
 }
-body .main-container div.row section ul.nav-tabs {
+body .main-container .scroll {
+  overflow-y: auto;
+  height: 100%;
+}
+body .main-container .scroll div.row section ul.nav-tabs {
   margin: 5px 0;
 }
-body .main-container div.row section ul.nav-tabs li {
+body .main-container .scroll div.row section ul.nav-tabs li {
   float: right;
 }
-body .main-container div.row section ul.nav-tabs li a {
+body .main-container .scroll div.row section ul.nav-tabs li a {
   padding: 5px 10px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 15px;
   border-radius: 0;
 }
-body .main-container div.row section ul.action-links {
+body .main-container .scroll div.row section ul.action-links {
   margin: 0;
 }
-body .main-container div.row section ul.action-links li {
+body .main-container .scroll div.row section ul.action-links li {
   float: right;
 }
-body .main-container div.row section ul.action-links li a {
+body .main-container .scroll div.row section ul.action-links li a {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 15px;
 }
-body .main-container div.row .region-content #block-system-main {
-  padding: 30px 10px;
+body .main-container .scroll div.row section .closable-content .fa-times {
+  display: none;
+}
+body .main-container .scroll div.row .region-content #block-system-main {
+  padding: 0 10px;
+}
+body .main-container .fading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20px;
+  z-index: 10;
+}
+body .main-container .fading.fading-top {
+  top: 0;
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, transparent 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, transparent 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, transparent 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#00000000', GradientType=0);
+}
+body .main-container .fading.fading-bottom {
+  bottom: 0;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+  background-image: -o-linear-gradient(top, transparent 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ffffffff', GradientType=0);
 }
 body footer {
   display: none;
 }
 body.front .main-container {
   bottom: 130px;
+}
+body.front .main-container .scroll div.row section .closable-content {
+  position: relative;
+}
+body.front .main-container .scroll div.row section .closable-content .fa-times {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 10px;
+  text-align: right;
+  z-index: 20;
 }
 @media screen and (min-width: 630px) {
   body.front .main-container {
