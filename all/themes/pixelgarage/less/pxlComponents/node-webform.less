@@ -25,6 +25,7 @@
   width: auto;
   font-family: @pxl-text-font-bold;
   font-size: @resp-font-size-min;
+  font-weight: normal;
   line-height: 1.5em;
   //letter-spacing: 1.2px;
   text-align: left;
@@ -102,7 +103,7 @@
           padding: 0 10px;
           height: 100%;
           font-family: @pxl-text-font-light;
-          font-size: @resp-font-size-min;
+          #pxl-mixins.font-size-responsive(@resp-font-size-min, @resp-font-size-max);
           line-height: 1.5em;
           text-align: left;
           color: @webform-color-text;
@@ -110,13 +111,6 @@
           #pxl-mixins.border-radius(0);
           border: 1px solid @webform-color-border;
           background-color: @webform-bg-color-input;
-
-          @media @narrow {
-            font-size: @resp-font-size;
-          }
-          @media @tablet {
-            font-size: @resp-font-size-max;
-          }
         }
         input:focus,
         textarea:focus {
@@ -131,9 +125,8 @@
         }
 
         select {
-          width: 95%;
           font-family: @pxl-text-font-light;
-          font-size: 10px;
+          #pxl-mixins.font-size-responsive(@resp-font-size-min, @resp-font-size-max);
           line-height: 1em;
           text-align: left;
           color: @webform-color-text;
@@ -141,17 +134,6 @@
           border: 1px solid @webform-color-border;
           background-color: @webform-bg-color-input;
           outline: none;
-
-          &#edit-submitted-prioritaet-2 {
-            width: 100%;
-          }
-
-          @media @narrow {
-            font-size: 2.6vw;
-          }
-          @media @tablet {
-            font-size: 15px;
-          }
 
           &:focus, &:active {
             outline: none;
@@ -206,38 +188,18 @@
           h2 {
             font-family: @pxl-text-font-bold;
             font-weight: bold;
-            font-size: @resp-font-size-min;
+            #pxl-mixins.font-size-responsive(@resp-font-size-min, @resp-font-size-max);
             line-height: 1em;
             text-align: left;
             text-transform: uppercase;
-
-            @media @narrow {
-              font-size: @resp-font-size;
-            }
-            @media @tablet {
-              font-size: @resp-font-size-max;
-            }
           }
           p {
             font-family: @pxl-text-font-light;
-            font-size: 10px;
+            #pxl-mixins.font-size-responsive(12px, 15px);
             line-height: 1em;
             text-align: left;
             color: @webform-color-text;
-
-            @media @narrow {
-              font-size: 2.6vw;
-            }
-            @media @tablet {
-              font-size: 15px;
-            }
           }
-        }
-
-        &.webform-component-select {
-          display: inline-block;
-          margin: 0 -2px 20px;
-          width: 50%;
         }
 
         //
@@ -249,7 +211,7 @@
             display: inline-block;
           }
 
-          input.form-text {
+          input.form-text, select {
             position: absolute;
             right: 0;
             width: @webform-inline-input-width;

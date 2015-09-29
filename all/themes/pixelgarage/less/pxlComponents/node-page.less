@@ -4,11 +4,88 @@
 
 // Variables
 // -------------------------
-
+@pxl-accordion-time-width:  15%;
+@pxl-accordion-title-width: 82%;
+@pxl-accordion-arrow-width: 3%;
 
 // Mixins
 // -------------------------
+.panel-group(@first-column-width: 0; @second-column-width: 97%; @icon-width:3% ) {
+  .panel {
+    border-radius: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
 
+    .panel-heading {
+      border-radius: 0;
+      border: none;
+      background: none;
+      padding: 10px 0;
+
+      a.accordion-toggle {
+        display: block;
+        font-family: @pxl-text-font-bold;
+        #pxl-mixins.font-size-responsive(@resp-font-size-min, @resp-font-size-max);
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &.collapsed {
+          span {
+            &.tagungs-thema-title {
+              &:before {
+                display: inline-block;
+                content: '\f105';
+                font-family: 'fontawesome';
+              }
+            }
+            &.tagungs-thema-title:hover:before {
+              display: inline-block;
+              content: '\f107';
+              font-family: 'fontawesome';
+            }
+          }
+        }
+
+        span {
+          display: inline-block;
+          margin: 0 -2px;
+          vertical-align: top;
+          #pxl-mixins.hyphenate();
+          white-space: normal;
+
+          &.tagungs-thema-time {
+            width: @first-column-width;
+            text-align: left;
+          }
+
+          &.tagungs-thema-title {
+            width: @second-column-width;
+            &:before {
+              display: inline-block;
+              content: '\f107';
+              font-family: 'fontawesome';
+              width: @icon-width;
+            }
+          }
+        }
+      }
+    }
+
+    .panel-collapse {
+      .panel-body {
+        margin: 0;
+        padding: 0 0 0 @first-column-width;
+        border: none;
+        #pxl-mixins.wysiwyg-body();
+      }
+    }
+  }
+}
 
 
 // General settings
@@ -20,22 +97,22 @@
     .field-name-title {
       h2 {
         font-family: @pxl-text-font-bold;
-        font-size: @resp-font-size-large-min;
-        letter-spacing: 1.2px;
+        #pxl-mixins.font-size-responsive(16px, 20px);
         text-transform: uppercase;
         color: @text-color;
-
-        @media @narrow {
-          font-size: @resp-font-size-large;
-        }
-        @media @tablet {
-          font-size: @resp-font-size-large-max;
-        }
       }
     }
 
     .field-name-body {
-      #pxl-mixins.wysiwyg-body;
+      #pxl-mixins.wysiwyg-body();
+    }
+
+    .field-name-tagungs-agenda {
+      .panel-group(@pxl-accordion-time-width, @pxl-accordion-title-width, @pxl-accordion-arrow-width);
+    }
+
+    .field-name-praxisdialoge {
+      .panel-group;
     }
 
   }

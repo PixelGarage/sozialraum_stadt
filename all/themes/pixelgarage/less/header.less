@@ -12,7 +12,8 @@
 @pxl-navi-margin-top: 20px;
 
 @pxl-header-height: (@pxl-menu-height + 2*@pxl-navi-margin-top + @pxl-brand-height);
-@pxl-header-height-small: (@pxl-menu-height + @pxl-navi-margin-top + @pxl-brand-height-small);
+@pxl-header-height-small: (@pxl-menu-height + 2*@pxl-navi-margin-top + @pxl-brand-height-small);
+@pxl-header-height-mobile: (@pxl-menu-height + @pxl-brand-height-small);
 
 
 // Mixins
@@ -23,21 +24,21 @@
 // Main settings
 // -------------------------
 body.navbar-is-fixed-top {
-  padding-top: @pxl-header-height-small !important;
+  padding-top: @pxl-header-height-mobile !important;
 
   &.admin-menu {
-    padding-top: @pxl-header-height-small !important;
+    padding-top: @pxl-header-height-mobile !important;
   }
 
   @media @tablet {
-    padding-top: (@pxl-header-height-small + @pxl-navi-margin-top) !important;
+    padding-top: @pxl-header-height-small !important;
 
     &.admin-menu {
-      padding-top: (@pxl-header-height-small + @pxl-navi-margin-top) !important;
+      padding-top: @pxl-header-height-small !important;
     }
 
     // main page with higher brand box
-    body.page-node-18 & {
+    body.front & {
       padding-top: @pxl-header-height !important;
 
       &.admin-menu {
@@ -59,7 +60,11 @@ header#navbar {
       float: none;
 
       .region-navigation {
-        margin: @pxl-navi-margin-top 0 0;
+        margin: 0;
+
+        @media @tablet {
+          margin: @pxl-navi-margin-top 0 0;
+        }
 
         #block-system-main-menu {
           ul.menu {
@@ -68,12 +73,22 @@ header#navbar {
 
             li {
               display: inline-block;
-              margin: 0 -2px;
-              padding: 0 10px 0 0;
+              margin: 0 -0.3em 0 0;
+              padding: 0;
               width: 33.3333333%;
+              border-right: 1px solid #fff;
 
               &:last-child {
-                padding-right: 0;
+                border: none;
+              }
+
+              @media @tablet {
+                padding: 0 10px 0 0;
+                border: none;
+
+                &:last-child {
+                  padding-right: 0;
+                }
               }
 
               a {
@@ -84,7 +99,6 @@ header#navbar {
                 font-size: 3vw;
                 color: #fff;
                 line-height: @pxl-menu-height;
-                //letter-spacing: 0.2px;
                 text-align: center;
                 text-transform: uppercase;
                 background-color: @pxl-color-blau;
@@ -153,7 +167,7 @@ header#navbar {
           }
 
           // main page with higher brand box
-          body.page-node-18 & {
+          body.front & {
             padding: 10px @grid-gutter-width/2;
             height: @pxl-brand-height;
             white-space: normal;
@@ -161,7 +175,7 @@ header#navbar {
             a.site-name {
               display: block;
               font-size: 30px;
-              text-decoration: underline;
+              border-bottom: 1px solid @text-color;
             }
             .site-lead {
               display: block;

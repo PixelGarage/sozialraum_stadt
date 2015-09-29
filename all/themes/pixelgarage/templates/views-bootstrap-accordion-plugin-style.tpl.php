@@ -3,11 +3,13 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a class="accordion-toggle"
+          <a class="accordion-toggle collapsed"
              data-toggle="collapse"
-             data-parent="#views-bootstrap-accordion-<?php print $id ?>"
              href="#collapse<?php print $key ?>">
-            <span class="tagungs-thema-time"><?php print $time[$key] ?></span><span class="tagungs-thema-title"><?php print $titles[$key] ?></span>
+            <?php if (!empty($time)): ?>
+              <span class="tagungs-thema-time"><?php print $time[$key] ?></span>
+            <?php endif; ?>
+            <span class="tagungs-thema-title"><?php print $titles[$key] ?></span>
           </a>
         </h4>
       </div>

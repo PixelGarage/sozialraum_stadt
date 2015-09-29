@@ -160,24 +160,35 @@
   //
   // wysiwyg body
   //
+  .font-size-responsive(@min-size; @max-size) {
+    font-size: @min-size;
+
+    @media @narrow {
+      font-size: unit(@max-size/6, vw);
+    }
+    @media @tablet {
+      font-size: @max-size;
+    }
+  }
+
   .wysiwyg-body() {
     h1, h2, h3, h4, h5, h6 {
       font-family: @pxl-text-font;
-      font-size: @font-size-base;
+      .font-size-responsive(@resp-font-size-min, @resp-font-size-max);
     }
     h1, h2, h3 {
-      font-size: @font-size-large;
+      .font-size-responsive(14px, 20px);
     }
 
     p, tbody td {
       font-family: @pxl-text-font;
-      font-size: @font-size-base;
+      .font-size-responsive(@resp-font-size-min, @resp-font-size-max);
       .hyphenate;
     }
 
     pre, address {
       font-family: @pxl-text-font-italics;
-      font-size: @font-size-base;
+      .font-size-responsive(@resp-font-size-min, @resp-font-size-max);
     }
 
     hr {

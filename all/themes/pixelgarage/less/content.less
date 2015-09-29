@@ -39,11 +39,24 @@ body {
   overflow-y: hidden;
   background: transparent url(../images/background.jpg) no-repeat top center / cover;
 
+  &.page-node-19 {
+    // tagung
+    background-image: url(../images/background.jpg);
+  }
+  &.page-node-20 {
+    // praxisdialoge
+    background-image: url(../images/background.jpg);
+  }
+  &.page-node-21 {
+    // anmeldung
+    background-image: url(../images/background.jpg);
+  }
+
   .main-container {
     position: absolute;
     overflow-y: auto;
-    top: (@pxl-header-height-small + @pxl-content-margin-tb);
-    bottom: (@pxl-footer-height + @pxl-content-margin-tb);
+    top: (@pxl-header-height-mobile + @pxl-content-margin-tb);
+    bottom: @pxl-footer-margin-bottom;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -52,7 +65,7 @@ body {
     max-width: @pxl-container-width;
 
     @media @tablet {
-      top: @pxl-header-height-small + @pxl-navi-margin-top + @pxl-content-margin-tb;
+      top: (@pxl-header-height-small + @pxl-content-margin-tb);
       width: 100%;
     }
 
@@ -61,7 +74,7 @@ body {
     div.row {
       section { // column(s)
         ul.nav-tabs {
-          margin-bottom: 5px;
+          margin: 5px 0;
           li {
             float: right;
             a {
@@ -96,11 +109,23 @@ body {
 
   } // main-container
 
+  footer {
+    display:none;
+  }
+
 }
 
-@media @tablet {
-  // main page with higher brand box
-  body.page-node-18 .main-container {
-    top: @pxl-header-height + @pxl-content-margin-tb;
+// front page with higher brand box and footer
+body.front {
+  .main-container {
+    bottom: (@pxl-footer-height + @pxl-content-margin-tb);
+
+    @media @tablet {
+      top: @pxl-header-height + @pxl-content-margin-tb;
+    }
+  }
+
+  footer {
+    display: block;
   }
 }
