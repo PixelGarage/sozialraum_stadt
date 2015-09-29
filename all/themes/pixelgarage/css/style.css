@@ -9230,10 +9230,14 @@ form#user-login {
 /*
  *  Node page component
  * --------------------------------------------------*/
+.node-page {
+  margin: 30px 0;
+}
 .node-page div.col-sm-12 {
   width: 100%;
 }
 .node-page div.col-sm-12 .field-name-title h2 {
+  margin-top: 0;
   font-family: 'HalisGrotesqueBold', sans-serif;
   font-size: 16px;
   text-transform: uppercase;
@@ -9351,6 +9355,9 @@ form#user-login {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda {
+  margin-bottom: 0;
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel {
   border-radius: 0;
@@ -9533,6 +9540,7 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge {
   margin-bottom: 24px;
+  margin-bottom: 0;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel {
   margin-bottom: 0;
