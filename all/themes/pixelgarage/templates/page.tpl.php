@@ -92,7 +92,7 @@
         <?php endif; ?>
 
         <?php if (!empty($site_slogan)): ?>
-          <div class="site-lead"><?php print $site_slogan; ?></div>
+          <a class="site-lead navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_slogan; ?></a>
         <?php endif; ?>
       </div>
 

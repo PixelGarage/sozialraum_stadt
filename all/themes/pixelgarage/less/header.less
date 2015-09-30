@@ -10,9 +10,10 @@
 @pxl-brand-height-small: 40px;
 
 @pxl-navi-margin-top: 20px;
+@pxl-brand-margin-top: 10px;
 
-@pxl-header-height: (@pxl-menu-height + 2*@pxl-navi-margin-top + @pxl-brand-height);
-@pxl-header-height-small: (@pxl-menu-height + 2*@pxl-navi-margin-top + @pxl-brand-height-small);
+@pxl-header-height: (@pxl-menu-height + @pxl-navi-margin-top + @pxl-brand-margin-top + @pxl-brand-height);
+@pxl-header-height-small: (@pxl-menu-height + @pxl-navi-margin-top + @pxl-brand-margin-top + @pxl-brand-height-small);
 @pxl-header-height-mobile: (@pxl-menu-height + @pxl-brand-height-small);
 
 
@@ -126,43 +127,37 @@ header#navbar {
         white-space: nowrap;
         background-color: #fff;
 
-        a.site-name {
+        a.navbar-brand {
           display: inline-block;
           float: none;
           margin: 0;
           padding: 0;
           height: auto;
-          font-family: @pxl-text-font-bold;
-          font-size: 2.8vw;
-          color: @pxl-color-blau;
-          line-height: @pxl-brand-height-small;
-          text-transform: uppercase;
-        }
-
-        .site-lead {
-          display: inline-block;
-          margin: 0 0 0 -4px;
-          padding: 0;
-          font-family: @pxl-text-font;
           font-size: 2.8vw;
           color: @pxl-color-blau;
           line-height: @pxl-brand-height-small;
           text-transform: uppercase;
 
-          &:before {
-            content: "-";
-            padding: 0 0.3vw;
+          &.site-name {
+            font-family: @pxl-text-font-bold;
+          }
+
+          &.site-lead {
+            margin: 0 0 0 -4px;
+            font-family: @pxl-text-font;
+
+            &:before {
+              content: "-";
+              padding: 0 0.3vw;
+            }
           }
         }
 
         @media @tablet {
-          margin: @pxl-navi-margin-top 0 0;
+          margin: @pxl-brand-margin-top 0 0;
           padding: 0 @grid-gutter-width/2;
 
-          a.site-name {
-            font-size: 17px;
-          }
-          .site-lead {
+          a.navbar-brand {
             font-size: 17px;
           }
 
@@ -172,19 +167,21 @@ header#navbar {
             height: @pxl-brand-height;
             white-space: normal;
 
-            a.site-name {
+            a.navbar-brand {
               display: block;
-              font-size: 30px;
-              border-bottom: 1px solid @text-color;
-            }
-            .site-lead {
-              display: block;
-              margin: 0;
-              font-size: 25px;
 
-              &:before {
-                content: "";
-                padding: 0;
+              &.site-name {
+                font-size: 30px;
+                border-bottom: 2px solid @text-color;
+              }
+              &.site-lead {
+                margin: 0;
+                font-size: 25px;
+
+                &:before {
+                  content: "";
+                  padding: 0;
+                }
               }
             }
           }

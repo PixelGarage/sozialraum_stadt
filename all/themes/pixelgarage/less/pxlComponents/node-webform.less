@@ -29,7 +29,7 @@
   line-height: 1.5em;
   //letter-spacing: 1.2px;
   text-align: left;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   color: @webform-color-label;
 
   @media @narrow {
@@ -185,18 +185,20 @@
         }
 
         &.webform-component-markup {
+          margin-bottom: 25px;
+          padding-top: 15px;
+
           h2 {
             font-family: @pxl-text-font-bold;
-            font-weight: bold;
+            font-weight: normal;
             #pxl-mixins.font-size-responsive(@resp-font-size-min, @resp-font-size-max);
             line-height: 1em;
             text-align: left;
-            text-transform: uppercase;
           }
           p {
             font-family: @pxl-text-font-light;
             #pxl-mixins.font-size-responsive(12px, 15px);
-            line-height: 1em;
+            line-height: 22px;
             text-align: left;
             color: @webform-color-text;
           }
@@ -221,6 +223,8 @@
       }
 
       div.form-actions {
+        padding-top: 25px;
+
         button.webform-submit {
           float: right;
           .resp-submit-button(@webform-color-submit, @webform-bg-color-submit);

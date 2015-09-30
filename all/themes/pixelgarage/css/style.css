@@ -9000,7 +9000,6 @@ form#user-login {
   font-weight: normal;
   line-height: 1.5em;
   text-align: left;
-  text-transform: uppercase;
   color: #193444;
 }
 @media screen and (min-width: 480px) {
@@ -9151,13 +9150,16 @@ form#user-login {
     font-size: 17px;
   }
 }
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup {
+  margin-bottom: 25px;
+  padding-top: 15px;
+}
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup h2 {
   font-family: 'HalisGrotesqueBold', sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 13px;
   line-height: 1em;
   text-align: left;
-  text-transform: uppercase;
 }
 @media screen and (min-width: 480px) {
   .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup h2 {
@@ -9172,7 +9174,7 @@ form#user-login {
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-component-markup p {
   font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 12px;
-  line-height: 1em;
+  line-height: 22px;
   text-align: left;
   color: #193444;
 }
@@ -9198,6 +9200,9 @@ form#user-login {
   position: absolute;
   right: 0;
   width: 58.333333%;
+}
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form div.form-actions {
+  padding-top: 25px;
 }
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit {
   float: right;
@@ -9422,13 +9427,13 @@ form#user-login {
   width: 85%;
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable {
-  width: 82%;
+  width: 81%;
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable:before {
   display: inline-block;
   content: '\f107';
   font-family: 'fontawesome';
-  width: 3%;
+  width: 4%;
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body {
   margin: 0;
@@ -9752,16 +9757,16 @@ body.navbar-is-fixed-top.admin-menu {
 }
 @media screen and (min-width: 630px) {
   body.navbar-is-fixed-top {
-    padding-top: 130px !important;
+    padding-top: 120px !important;
   }
   body.navbar-is-fixed-top.admin-menu {
-    padding-top: 130px !important;
+    padding-top: 120px !important;
   }
   body.front body.navbar-is-fixed-top {
-    padding-top: 190px !important;
+    padding-top: 180px !important;
   }
   body.front body.navbar-is-fixed-top.admin-menu {
-    padding-top: 190px !important;
+    padding-top: 180px !important;
   }
 }
 header#navbar {
@@ -9838,41 +9843,34 @@ header#navbar .container .navbar-header .navbar-site {
   white-space: nowrap;
   background-color: #fff;
 }
-header#navbar .container .navbar-header .navbar-site a.site-name {
+header#navbar .container .navbar-header .navbar-site a.navbar-brand {
   display: inline-block;
   float: none;
   margin: 0;
   padding: 0;
   height: auto;
+  font-size: 2.8vw;
+  color: #193444;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-name {
   font-family: 'HalisGrotesqueBold', sans-serif;
-  font-size: 2.8vw;
-  color: #193444;
-  line-height: 40px;
-  text-transform: uppercase;
 }
-header#navbar .container .navbar-header .navbar-site .site-lead {
-  display: inline-block;
+header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead {
   margin: 0 0 0 -4px;
-  padding: 0;
   font-family: 'HalisGrotesqueLight', sans-serif;
-  font-size: 2.8vw;
-  color: #193444;
-  line-height: 40px;
-  text-transform: uppercase;
 }
-header#navbar .container .navbar-header .navbar-site .site-lead:before {
+header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead:before {
   content: "-";
   padding: 0 0.3vw;
 }
 @media screen and (min-width: 630px) {
   header#navbar .container .navbar-header .navbar-site {
-    margin: 20px 0 0;
+    margin: 10px 0 0;
     padding: 0 15px;
   }
-  header#navbar .container .navbar-header .navbar-site a.site-name {
-    font-size: 17px;
-  }
-  header#navbar .container .navbar-header .navbar-site .site-lead {
+  header#navbar .container .navbar-header .navbar-site a.navbar-brand {
     font-size: 17px;
   }
   body.front header#navbar .container .navbar-header .navbar-site {
@@ -9880,17 +9878,18 @@ header#navbar .container .navbar-header .navbar-site .site-lead:before {
     height: 100px;
     white-space: normal;
   }
-  body.front header#navbar .container .navbar-header .navbar-site a.site-name {
+  body.front header#navbar .container .navbar-header .navbar-site a.navbar-brand {
     display: block;
-    font-size: 30px;
-    border-bottom: 1px solid #193444;
   }
-  body.front header#navbar .container .navbar-header .navbar-site .site-lead {
-    display: block;
+  body.front header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-name {
+    font-size: 30px;
+    border-bottom: 2px solid #193444;
+  }
+  body.front header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead {
     margin: 0;
     font-size: 25px;
   }
-  body.front header#navbar .container .navbar-header .navbar-site .site-lead:before {
+  body.front header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead:before {
     content: "";
     padding: 0;
   }
@@ -9922,16 +9921,16 @@ body {
   position: relative;
   height: 100%;
   overflow-y: hidden;
-  background: transparent url(../images/background.jpg) no-repeat top center / cover;
+  background: transparent url(../images/start.jpg) no-repeat top center / cover;
 }
 body.page-node-19 {
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/programm.jpg);
 }
 body.page-node-20 {
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/praxisdialoge.jpg);
 }
 body.page-node-21 {
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/anmeldung.jpg);
 }
 body .main-container {
   position: absolute;
@@ -9947,7 +9946,7 @@ body .main-container {
 }
 @media screen and (min-width: 630px) {
   body .main-container {
-    top: 150px;
+    top: 140px;
     width: 100%;
   }
 }
@@ -9992,19 +9991,19 @@ body .main-container .fading {
 }
 body .main-container .fading.fading-top {
   top: 0;
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, transparent 100%);
-  background-image: -o-linear-gradient(top, #ffffff 0%, transparent 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, transparent 100%);
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#00000000', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#00ffffff', GradientType=0);
 }
 body .main-container .fading.fading-bottom {
   bottom: 0;
-  background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
-  background-image: -o-linear-gradient(top, transparent 0%, #ffffff 100%);
-  background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ffffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffffff', GradientType=0);
 }
 body footer {
   display: none;
@@ -10027,7 +10026,7 @@ body.front .main-container .scroll div.row section .closable-content .fa-times {
 }
 @media screen and (min-width: 630px) {
   body.front .main-container {
-    top: 210px;
+    top: 200px;
   }
 }
 body.front footer {

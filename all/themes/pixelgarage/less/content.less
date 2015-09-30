@@ -38,19 +38,19 @@ body {
   height: 100%;
   //min-height: 480px;
   overflow-y: hidden;
-  background: transparent url(../images/background.jpg) no-repeat top center / cover;
+  background: transparent url(../images/start.jpg) no-repeat top center / cover;
 
   &.page-node-19 {
     // tagung
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/programm.jpg);
   }
   &.page-node-20 {
     // praxisdialoge
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/praxisdialoge.jpg);
   }
   &.page-node-21 {
     // anmeldung
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/anmeldung.jpg);
   }
 
   .main-container {
@@ -127,11 +127,11 @@ body {
 
       &.fading-top {
         top: 0;
-        #gradient.vertical(#fff, transparent);
+        #gradient.vertical(#fff, rgba(255,255,255,0));
       }
       &.fading-bottom {
         bottom: 0;
-        #gradient.vertical(transparent, #fff);
+        #gradient.vertical(rgba(255,255,255,0), #fff);
       }
     }
   } // main-container
