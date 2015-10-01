@@ -10,7 +10,7 @@
 
 // Mixins
 // -------------------------
-.panel-group(@first-column-width: 0; @second-column-width: 97%; @icon-width:3% ) {
+.panel-group(@first-column-width: 0; @second-column-width: 97%; @icon-width:3%; @icon-collapsed: '\f105'; @icon-expanded: '\f107'; ) {
   margin-bottom: 0;
 
   .panel {
@@ -49,26 +49,41 @@
             text-align: left;
           }
 
+          &.tagungs-thema-first {
+            width: 0;
+
+            &.expandable {
+              width: @first-column-width;
+              min-width: 16px;
+
+              &:before {
+                display: inline-block;
+                content: @icon-expanded;
+                font-family: 'fontawesome';
+              }
+            }
+          }
+
           &.tagungs-thema-title {
             width: (@second-column-width+@icon-width);
 
             &.expandable {
               width: @second-column-width;
 
-              &:before {
+              &:before when(@icon-width > 0) {
                 display: inline-block;
+                content: @icon-expanded;
                 width: @icon-width;
                 min-width: 16px;
-                content: '\f107';
                 font-family: 'fontawesome';
               }
             }
 
             .subtitle {
-              padding: 10px 0;
+              padding: 10px 0 0;
             }
             .referent {
-              padding: 0 0 10px;
+              padding: 10px 0 0;
               font-family: 'HalisGrotesqueLightItalic';
             }
           }
@@ -76,17 +91,31 @@
 
         &.collapsed {
           span {
-            &.tagungs-thema-title.expandable {
+            &.tagungs-thema-first.expandable {
               &:before {
-                display: inline-block;
-                content: '\f105';
-                font-family: 'fontawesome';
+                content: @icon-collapsed;
               }
             }
-            &.tagungs-thema-title.expandable:hover:before {
-              display: inline-block;
-              content: '\f107';
-              font-family: 'fontawesome';
+
+            &.tagungs-thema-title.expandable {
+              &:before when(@icon-width > 0) {
+                content: @icon-collapsed;
+              }
+            }
+          }
+
+          &:hover {
+            span {
+              &.tagungs-thema-first.expandable {
+                &:before {
+                  content: @icon-expanded;
+                }
+              }
+              &.tagungs-thema-title.expandable {
+                &:before when(@icon-width > 0) {
+                  content: @icon-expanded;
+                }
+              }
             }
           }
         }
@@ -132,7 +161,7 @@
     }
 
     .field-name-praxisdialoge {
-      .panel-group;
+      .panel-group(@pxl-accordion-arrow-width, (100%-@pxl-accordion-arrow-width), 0);
     }
   }
 }

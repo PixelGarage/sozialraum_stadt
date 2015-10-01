@@ -43,6 +43,10 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
       $vars['time'][$id] = strip_tags($view->style_plugin->get_field($id, 'field_zeit'));
       $vars['subtitle'][$id] = strip_tags($view->style_plugin->get_field($id, 'field_subtitle'));
       $vars['referent'][$id] = htmlspecialchars_decode(strip_tags($view->style_plugin->get_field($id, 'field_referent'), '<i>'));
+
+    } else if ($view->name == "praxisdialoge") {
+      $vars['first_column'][$id] = ' ';
+
     }
   }
 }

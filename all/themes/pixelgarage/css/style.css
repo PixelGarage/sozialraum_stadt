@@ -9419,6 +9419,18 @@ form#user-login {
   min-width: 60px;
   text-align: left;
 }
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-first {
+  width: 0;
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-first.expandable {
+  width: 15%;
+  min-width: 16px;
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-first.expandable:before {
+  display: inline-block;
+  content: '\f107';
+  font-family: 'fontawesome';
+}
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title {
   width: 85%;
 }
@@ -9427,27 +9439,29 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable:before {
   display: inline-block;
+  content: '\f107';
   width: 4%;
   min-width: 16px;
-  content: '\f107';
   font-family: 'fontawesome';
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title .subtitle {
-  padding: 10px 0;
+  padding: 10px 0 0;
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title .referent {
-  padding: 0 0 10px;
+  padding: 10px 0 0;
   font-family: 'HalisGrotesqueLightItalic';
 }
-.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:before {
-  display: inline-block;
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-first.expandable:before {
   content: '\f105';
-  font-family: 'fontawesome';
 }
-.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:hover:before {
-  display: inline-block;
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:before {
+  content: '\f105';
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed:hover span.tagungs-thema-first.expandable:before {
   content: '\f107';
-  font-family: 'fontawesome';
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed:hover span.tagungs-thema-title.expandable:before {
+  content: '\f107';
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body {
   margin: 0;
@@ -9558,28 +9572,7 @@ form#user-login {
   height: auto;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge {
-  margin-bottom: 24px;
   margin-bottom: 0;
-}
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel {
-  margin-bottom: 0;
-  border-radius: 4px;
-}
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel + .panel {
-  margin-top: 5px;
-}
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel-heading {
-  border-bottom: 0;
-}
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel-heading + .panel-collapse > .panel-body,
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel-heading + .panel-collapse > .list-group {
-  border-top: 1px solid #dddddd;
-}
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel-footer {
-  border-top: 0;
-}
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel-footer + .panel-collapse .panel-body {
-  border-bottom: 1px solid #dddddd;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel {
   border-radius: 0;
@@ -9627,43 +9620,44 @@ form#user-login {
   white-space: normal;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-time {
-  width: 0;
+  width: 4%;
   min-width: 60px;
   text-align: left;
 }
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-first {
+  width: 0;
+}
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-first.expandable {
+  width: 4%;
+  min-width: 16px;
+}
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-first.expandable:before {
+  display: inline-block;
+  content: '\f107';
+  font-family: 'fontawesome';
+}
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title {
-  width: 100%;
+  width: 96%;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable {
-  width: 97%;
-}
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable:before {
-  display: inline-block;
-  width: 3%;
-  min-width: 16px;
-  content: '\f107';
-  font-family: 'fontawesome';
+  width: 96%;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title .subtitle {
-  padding: 10px 0;
+  padding: 10px 0 0;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title .referent {
-  padding: 0 0 10px;
+  padding: 10px 0 0;
   font-family: 'HalisGrotesqueLightItalic';
 }
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:before {
-  display: inline-block;
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-first.expandable:before {
   content: '\f105';
-  font-family: 'fontawesome';
 }
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:hover:before {
-  display: inline-block;
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed:hover span.tagungs-thema-first.expandable:before {
   content: '\f107';
-  font-family: 'fontawesome';
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body {
   margin: 0;
-  padding: 0 0 0 0;
+  padding: 0 0 0 4%;
   border: none;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body h1,
