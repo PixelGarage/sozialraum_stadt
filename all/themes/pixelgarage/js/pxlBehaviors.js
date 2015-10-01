@@ -27,6 +27,20 @@
     }
   };
 
+  Drupal.behaviors.enableTopBottomTextFader = {
+    attach: function() {
+      $(window).off('.fading');
+      $(window).on('load.fading resize.fading shown.bs.collapse.fading hidden.bs.collapse.fading', function() {
+        var $mainContainer = $('.main-container'),
+            hMainContainer = $mainContainer.height(),
+            hContent = $mainContainer.find('.scroll .container').height(),
+            $tbFading = $mainContainer.find('.fading');
+
+        $tbFading.toggle(hContent > hMainContainer);
+      });
+    }
+  };
+
   /**
    * This behavior adds shadow to header on scroll.
    *

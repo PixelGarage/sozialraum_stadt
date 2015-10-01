@@ -33,13 +33,16 @@ function pixelgarage_preprocess_page(&$vars) {
 function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
   $view = &$vars['view'];
 
-    // Get zeit fields of each row.
   foreach ($view->result as $id => $row) {
+    // disable collapse/expand of row if no content is available
     $body = $row->_entity_properties['entity object']->body;
     $vars['toggling'][$id] = !empty($body) && !empty($body[LANGUAGE_NONE][0]['value']);
 
+    // Get specific fields of each row.
     if ($view->name == "tagungs_agenda") {
       $vars['time'][$id] = strip_tags($view->style_plugin->get_field($id, 'field_zeit'));
+      $vars['subtitle'][$id] = strip_tags($view->style_plugin->get_field($id, 'field_subtitle'));
+      $vars['referent'][$id] = htmlspecialchars_decode(strip_tags($view->style_plugin->get_field($id, 'field_referent'), '<i>'));
     }
   }
 }

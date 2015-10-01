@@ -8,7 +8,11 @@
             <?php if (!empty($time)): ?>
               <span class="tagungs-thema-time"><?php print $time[$key] ?></span>
             <?php endif; ?>
-            <span class="tagungs-thema-title <?php if ($toggling[$key]): ?>expandable<?php endif; ?>"><?php print $titles[$key] ?></span>
+            <span class="tagungs-thema-title <?php if ($toggling[$key]): ?>expandable<?php endif; ?>">
+              <?php print $titles[$key] ?>
+              <?php if ($subtitle[$key]): ?><div class="subtitle"><?php print $subtitle[$key] ?></div><?php endif; ?>
+              <?php if ($referent[$key]): ?><div class="referent"><?php print $referent[$key] ?></div><?php endif; ?>
+            </span>
           </a>
         </h4>
       </div>

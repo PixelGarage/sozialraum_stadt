@@ -8555,6 +8555,11 @@ div.features-export-list .form-type-checkbox input[type=checkbox] {
   src: url('../fonts/HalisGrotesqueLight/HalisGrotesqueLight.eot');
   src: url('../fonts/HalisGrotesqueLight/HalisGrotesqueLight.eot') format('embedded-opentype'), url('../fonts/HalisGrotesqueLight/HalisGrotesqueLight.woff2') format('woff2'), url('../fonts/HalisGrotesqueLight/HalisGrotesqueLight.woff') format('woff'), url('../fonts/HalisGrotesqueLight/HalisGrotesqueLight.ttf') format('truetype'), url('../fonts/HalisGrotesqueLight/HalisGrotesqueLight.svg#HalisGrotesqueLight') format('svg');
 }
+@font-face {
+  font-family: 'HalisGrotesqueLightItalic';
+  src: url('../fonts/HalisGrotesqueLightItalic/HalisGrotesqueLightItalic.eot');
+  src: url('../fonts/HalisGrotesqueLightItalic/HalisGrotesqueLightItalic.eot') format('embedded-opentype'), url('../fonts/HalisGrotesqueLightItalic/HalisGrotesqueLightItalic.woff2') format('woff2'), url('../fonts/HalisGrotesqueLightItalic/HalisGrotesqueLightItalic.woff') format('woff'), url('../fonts/HalisGrotesqueLightItalic/HalisGrotesqueLightItalic.ttf') format('truetype'), url('../fonts/HalisGrotesqueLightItalic/HalisGrotesqueLightItalic.svg#HalisGrotesqueLightItalic') format('svg');
+}
 /* --------------------------------------------------
  * Pixelgarage Mixins library
  *
@@ -8667,7 +8672,7 @@ form#user-login {
 }
 @media screen and (min-width: 992px) {
   #user_login_form {
-    padding: 2em;
+    padding: 0 2em;
     width: 100%;
     border: 0;
     border-right: 1px solid #eeeeee;
@@ -9309,7 +9314,7 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-body p,
 .node-page div.col-sm-12 .field-name-body tbody td {
   font-family: 'HalisGrotesqueLight', sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -9321,30 +9326,30 @@ form#user-login {
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 .field-name-body p,
   .node-page div.col-sm-12 .field-name-body tbody td {
-    font-size: 2.83333333vw;
+    font-size: 2.5vw;
   }
 }
 @media screen and (min-width: 630px) {
   .node-page div.col-sm-12 .field-name-body p,
   .node-page div.col-sm-12 .field-name-body tbody td {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 .node-page div.col-sm-12 .field-name-body pre,
 .node-page div.col-sm-12 .field-name-body address {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
-  font-size: 13px;
+  font-family: 'HalisGrotesqueLightItalic', sans-serif;
+  font-size: 11px;
 }
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 .field-name-body pre,
   .node-page div.col-sm-12 .field-name-body address {
-    font-size: 2.83333333vw;
+    font-size: 2.5vw;
   }
 }
 @media screen and (min-width: 630px) {
   .node-page div.col-sm-12 .field-name-body pre,
   .node-page div.col-sm-12 .field-name-body address {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 .node-page div.col-sm-12 .field-name-body hr {
@@ -9396,16 +9401,6 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle:hover {
   text-decoration: none;
 }
-.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:before {
-  display: inline-block;
-  content: '\f105';
-  font-family: 'fontawesome';
-}
-.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:hover:before {
-  display: inline-block;
-  content: '\f107';
-  font-family: 'fontawesome';
-}
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span {
   display: inline-block;
   margin: 0 -2px;
@@ -9421,6 +9416,7 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-time {
   width: 15%;
+  min-width: 60px;
   text-align: left;
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title {
@@ -9431,9 +9427,27 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable:before {
   display: inline-block;
+  width: 4%;
+  min-width: 16px;
   content: '\f107';
   font-family: 'fontawesome';
-  width: 4%;
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title .subtitle {
+  padding: 10px 0;
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-title .referent {
+  padding: 0 0 10px;
+  font-family: 'HalisGrotesqueLightItalic';
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:before {
+  display: inline-block;
+  content: '\f105';
+  font-family: 'fontawesome';
+}
+.node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:hover:before {
+  display: inline-block;
+  content: '\f107';
+  font-family: 'fontawesome';
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body {
   margin: 0;
@@ -9491,7 +9505,7 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body p,
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body tbody td {
   font-family: 'HalisGrotesqueLight', sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -9503,30 +9517,30 @@ form#user-login {
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body p,
   .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body tbody td {
-    font-size: 2.83333333vw;
+    font-size: 2.5vw;
   }
 }
 @media screen and (min-width: 630px) {
   .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body p,
   .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body tbody td {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body pre,
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body address {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
-  font-size: 13px;
+  font-family: 'HalisGrotesqueLightItalic', sans-serif;
+  font-size: 11px;
 }
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body pre,
   .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body address {
-    font-size: 2.83333333vw;
+    font-size: 2.5vw;
   }
 }
 @media screen and (min-width: 630px) {
   .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body pre,
   .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body address {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body hr {
@@ -9599,16 +9613,6 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle:hover {
   text-decoration: none;
 }
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:before {
-  display: inline-block;
-  content: '\f105';
-  font-family: 'fontawesome';
-}
-.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:hover:before {
-  display: inline-block;
-  content: '\f107';
-  font-family: 'fontawesome';
-}
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span {
   display: inline-block;
   margin: 0 -2px;
@@ -9624,6 +9628,7 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-time {
   width: 0;
+  min-width: 60px;
   text-align: left;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title {
@@ -9634,9 +9639,27 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title.expandable:before {
   display: inline-block;
+  width: 3%;
+  min-width: 16px;
   content: '\f107';
   font-family: 'fontawesome';
-  width: 3%;
+}
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title .subtitle {
+  padding: 10px 0;
+}
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-title .referent {
+  padding: 0 0 10px;
+  font-family: 'HalisGrotesqueLightItalic';
+}
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:before {
+  display: inline-block;
+  content: '\f105';
+  font-family: 'fontawesome';
+}
+.node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle.collapsed span.tagungs-thema-title.expandable:hover:before {
+  display: inline-block;
+  content: '\f107';
+  font-family: 'fontawesome';
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body {
   margin: 0;
@@ -9694,7 +9717,7 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body p,
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body tbody td {
   font-family: 'HalisGrotesqueLight', sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -9706,30 +9729,30 @@ form#user-login {
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body p,
   .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body tbody td {
-    font-size: 2.83333333vw;
+    font-size: 2.5vw;
   }
 }
 @media screen and (min-width: 630px) {
   .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body p,
   .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body tbody td {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body pre,
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body address {
-  font-family: 'HalisGrotesqueRegular', sans-serif;
-  font-size: 13px;
+  font-family: 'HalisGrotesqueLightItalic', sans-serif;
+  font-size: 11px;
 }
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body pre,
   .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body address {
-    font-size: 2.83333333vw;
+    font-size: 2.5vw;
   }
 }
 @media screen and (min-width: 630px) {
   .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body pre,
   .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body address {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body hr {
@@ -9920,6 +9943,7 @@ html {
 body {
   position: relative;
   height: 100%;
+  min-height: 320px;
   overflow-y: hidden;
   background: transparent url(../images/start.jpg) no-repeat top center / cover;
 }
@@ -9942,7 +9966,7 @@ body .main-container {
   padding: 0;
   width: 95%;
   max-width: 600px;
-  background-color: #fff;
+  background: none;
 }
 @media screen and (min-width: 630px) {
   body .main-container {
@@ -9954,35 +9978,39 @@ body .main-container .scroll {
   overflow-y: auto;
   height: 100%;
 }
-body .main-container .scroll div.row section ul.nav-tabs {
-  margin: 5px 0;
+body .main-container .scroll .container div.row section div.messages {
+  margin-top: 20px;
 }
-body .main-container .scroll div.row section ul.nav-tabs li {
+body .main-container .scroll .container div.row section ul.nav-tabs {
+  margin: 20px 0 5px;
+}
+body .main-container .scroll .container div.row section ul.nav-tabs li {
   float: right;
 }
-body .main-container .scroll div.row section ul.nav-tabs li a {
+body .main-container .scroll .container div.row section ul.nav-tabs li a {
   padding: 5px 10px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 15px;
   border-radius: 0;
 }
-body .main-container .scroll div.row section ul.action-links {
+body .main-container .scroll .container div.row section ul.action-links {
   margin: 0;
 }
-body .main-container .scroll div.row section ul.action-links li {
+body .main-container .scroll .container div.row section ul.action-links li {
   float: right;
 }
-body .main-container .scroll div.row section ul.action-links li a {
+body .main-container .scroll .container div.row section ul.action-links li a {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 15px;
 }
-body .main-container .scroll div.row section .closable-content .fa-times {
+body .main-container .scroll .container div.row section .closable-content .fa-times {
   display: none;
 }
-body .main-container .scroll div.row .region-content #block-system-main {
+body .main-container .scroll .container div.row .region-content #block-system-main {
   padding: 0 10px;
 }
 body .main-container .fading {
+  display: none;
   position: absolute;
   left: 0;
   right: 0;

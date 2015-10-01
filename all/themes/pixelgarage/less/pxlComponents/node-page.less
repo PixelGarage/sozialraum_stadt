@@ -36,6 +36,44 @@
           text-decoration: none;
         }
 
+        span {
+          display: inline-block;
+          margin: 0 -2px;
+          vertical-align: top;
+          #pxl-mixins.hyphenate();
+          white-space: normal;
+
+          &.tagungs-thema-time {
+            width: @first-column-width;
+            min-width: 60px;
+            text-align: left;
+          }
+
+          &.tagungs-thema-title {
+            width: (@second-column-width+@icon-width);
+
+            &.expandable {
+              width: @second-column-width;
+
+              &:before {
+                display: inline-block;
+                width: @icon-width;
+                min-width: 16px;
+                content: '\f107';
+                font-family: 'fontawesome';
+              }
+            }
+
+            .subtitle {
+              padding: 10px 0;
+            }
+            .referent {
+              padding: 0 0 10px;
+              font-family: 'HalisGrotesqueLightItalic';
+            }
+          }
+        }
+
         &.collapsed {
           span {
             &.tagungs-thema-title.expandable {
@@ -49,33 +87,6 @@
               display: inline-block;
               content: '\f107';
               font-family: 'fontawesome';
-            }
-          }
-        }
-
-        span {
-          display: inline-block;
-          margin: 0 -2px;
-          vertical-align: top;
-          #pxl-mixins.hyphenate();
-          white-space: normal;
-
-          &.tagungs-thema-time {
-            width: @first-column-width;
-            text-align: left;
-          }
-
-          &.tagungs-thema-title {
-            width: (@second-column-width+@icon-width);
-          }
-
-          &.tagungs-thema-title.expandable {
-            width: @second-column-width;
-            &:before {
-              display: inline-block;
-              content: '\f107';
-              font-family: 'fontawesome';
-              width: @icon-width;
             }
           }
         }
