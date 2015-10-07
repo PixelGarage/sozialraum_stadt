@@ -9063,6 +9063,10 @@ form#user-login {
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-textarea-wrapper div.grippie {
   display: none;
 }
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-radios .radio label input {
+  position: relative;
+  margin-left: 0;
+}
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component select {
   font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 13px;
@@ -9197,11 +9201,13 @@ form#user-login {
   position: relative;
 }
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline label,
-.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline input {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline input,
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline div.form-radios {
   display: inline-block;
 }
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline input.form-text,
-.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline select {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline select,
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component.webform-container-inline div.form-radios {
   position: absolute;
   right: 0;
   width: 58.333333%;
@@ -9315,7 +9321,6 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-body tbody td {
   font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 11px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -9405,7 +9410,6 @@ form#user-login {
   display: inline-block;
   margin: 0 -2px;
   vertical-align: top;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -9520,7 +9524,6 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body tbody td {
   font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 11px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -9610,7 +9613,6 @@ form#user-login {
   display: inline-block;
   margin: 0 -2px;
   vertical-align: top;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -9712,7 +9714,6 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body tbody td {
   font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 11px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -9860,6 +9861,12 @@ header#navbar .container .navbar-header .navbar-site {
   white-space: nowrap;
   background-color: #fff;
 }
+header#navbar .container .navbar-header .navbar-site:hover {
+  background-color: #f59878;
+}
+header#navbar .container .navbar-header .navbar-site:hover a.navbar-brand {
+  color: #823444;
+}
 header#navbar .container .navbar-header .navbar-site a.navbar-brand {
   display: inline-block;
   float: none;
@@ -9872,15 +9879,24 @@ header#navbar .container .navbar-header .navbar-site a.navbar-brand {
   text-transform: uppercase;
 }
 header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-name {
+  width: 22%;
   font-family: 'HalisGrotesqueBold', sans-serif;
 }
 header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead {
+  position: relative;
   margin: 0 0 0 -4px;
+  width: 78%;
   font-family: 'HalisGrotesqueLight', sans-serif;
+  max-width: 100%;
 }
 header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead:before {
   content: "-";
   padding: 0 0.3vw;
+}
+header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead span.date {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 @media screen and (min-width: 630px) {
   header#navbar .container .navbar-header .navbar-site {
@@ -9897,6 +9913,7 @@ header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead:be
   }
   body.front header#navbar .container .navbar-header .navbar-site a.navbar-brand {
     display: block;
+    width: auto;
   }
   body.front header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-name {
     font-size: 30px;
@@ -9909,6 +9926,9 @@ header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead:be
   body.front header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead:before {
     content: "";
     padding: 0;
+  }
+  body.front header#navbar .container .navbar-header .navbar-site:hover a.navbar-brand.site-name {
+    border-bottom: 2px solid #823444;
   }
 }
 header#navbar .container .navbar-header button.navbar-toggle {
@@ -9942,13 +9962,13 @@ body {
   background: transparent url(../images/start.jpg) no-repeat top center / cover;
 }
 body.page-node-19 {
-  background-image: url(../images/programm.jpg);
+  background: transparent url(../images/programm.jpg) no-repeat top center / cover;
 }
 body.page-node-20 {
-  background-image: url(../images/praxisdialoge.jpg);
+  background: transparent url(../images/praxisdialoge.jpg) no-repeat top center / cover;
 }
 body.page-node-21 {
-  background-image: url(../images/anmeldung.jpg);
+  background: transparent url(../images/anmeldung.jpg) no-repeat top center / cover;
 }
 body .main-container {
   position: absolute;

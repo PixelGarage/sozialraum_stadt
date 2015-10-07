@@ -124,6 +124,17 @@
           }
         }
 
+        .form-radios {
+          .radio {
+            label {
+              input {
+                position: relative;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+
         select {
           font-family: @pxl-text-font-light;
           #pxl-mixins.font-size-responsive(@resp-font-size-min, @resp-font-size-max);
@@ -209,11 +220,11 @@
         &.webform-container-inline {
           position: relative;
 
-          label, input {
+          label, input, div.form-radios {
             display: inline-block;
           }
 
-          input.form-text, select {
+          input.form-text, select, div.form-radios {
             position: absolute;
             right: 0;
             width: @webform-inline-input-width;

@@ -92,7 +92,10 @@
         <?php endif; ?>
 
         <?php if (!empty($site_slogan)): ?>
-          <a class="site-lead navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_slogan; ?></a>
+          <a class="site-lead navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <span class="slogan"><?php print $site_slogan; ?></span>
+            <span class="date"> 26. Mai 2016</span>
+          </a>
         <?php endif; ?>
       </div>
 

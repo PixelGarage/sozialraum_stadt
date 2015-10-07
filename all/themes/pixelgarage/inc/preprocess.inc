@@ -37,6 +37,7 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
     // disable collapse/expand of row if no content is available
     $body = $row->_entity_properties['entity object']->body;
     $vars['toggling'][$id] = !empty($body) && !empty($body[LANGUAGE_NONE][0]['value']);
+    $vars['panel_open'][$id] = false;
 
     // Get specific fields of each row.
     if ($view->name == "tagungs_agenda") {
@@ -46,6 +47,7 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 
     } else if ($view->name == "praxisdialoge") {
       $vars['first_column'][$id] = ' ';
+      $vars['panel_open'][$id] = ($id == 0);
 
     }
   }

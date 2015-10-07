@@ -127,6 +127,14 @@ header#navbar {
         white-space: nowrap;
         background-color: #fff;
 
+        &:hover {
+          background-color: @pxl-color-pfirsich;
+
+          a.navbar-brand {
+            color: @pxl-color-braun;
+          }
+        }
+
         a.navbar-brand {
           display: inline-block;
           float: none;
@@ -139,16 +147,26 @@ header#navbar {
           text-transform: uppercase;
 
           &.site-name {
+            width: 22%;
             font-family: @pxl-text-font-bold;
           }
 
           &.site-lead {
+            position: relative;
             margin: 0 0 0 -4px;
+            width: 78%;
             font-family: @pxl-text-font;
+            max-width: 100%;
 
             &:before {
               content: "-";
               padding: 0 0.3vw;
+            }
+
+            span.date {
+              position: absolute;
+              right: 0;
+              top: 0;
             }
           }
         }
@@ -169,6 +187,7 @@ header#navbar {
 
             a.navbar-brand {
               display: block;
+              width: auto;
 
               &.site-name {
                 font-size: 30px;
@@ -184,6 +203,13 @@ header#navbar {
                 }
               }
             }
+
+            &:hover {
+              a.navbar-brand.site-name {
+                border-bottom: 2px solid @pxl-color-braun;
+              }
+            }
+
           }
         }
       }

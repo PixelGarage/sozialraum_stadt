@@ -3,7 +3,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a class="accordion-toggle collapsed" href="#collapse<?php print $key ?>"
+          <a class="accordion-toggle <?php if (!$panel_open[$key]): ?>collapsed<?php endif; ?>" href="#collapse<?php print $key ?>"
             <?php if ($toggling[$key]): ?>data-toggle="collapse"<?php endif; ?>>
             <?php if (!empty($time)): ?>
               <span class="tagungs-thema-time"><?php print $time[$key] ?></span>
@@ -19,7 +19,7 @@
         </h4>
       </div>
 
-      <div id="collapse<?php print $key ?>" class="panel-collapse collapse">
+      <div id="collapse<?php print $key ?>" class="panel-collapse collapse <?php if ($panel_open[$key]): ?>in<?php endif; ?>">
         <div class="panel-body">
           <?php print $row ?>
         </div>
