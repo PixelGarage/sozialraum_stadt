@@ -9066,6 +9066,7 @@ form#user-login {
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component .form-radios .radio label input {
   position: relative;
   margin-left: 0;
+  vertical-align: text-top;
 }
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component select {
   font-family: 'HalisGrotesqueLight', sans-serif;
@@ -9321,12 +9322,6 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-body tbody td {
   font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 11px;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
 }
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 .field-name-body p,
@@ -9410,12 +9405,6 @@ form#user-login {
   display: inline-block;
   margin: 0 -2px;
   vertical-align: top;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
   white-space: normal;
 }
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-heading a.accordion-toggle span.tagungs-thema-time {
@@ -9524,12 +9513,6 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body tbody td {
   font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 11px;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
 }
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 .field-name-tagungs-agenda .panel .panel-collapse .panel-body p,
@@ -9613,12 +9596,6 @@ form#user-login {
   display: inline-block;
   margin: 0 -2px;
   vertical-align: top;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
   white-space: normal;
 }
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-heading a.accordion-toggle span.tagungs-thema-time {
@@ -9714,12 +9691,6 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body tbody td {
   font-family: 'HalisGrotesqueLight', sans-serif;
   font-size: 11px;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
 }
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 .field-name-praxisdialoge .panel .panel-collapse .panel-body p,
@@ -9879,13 +9850,13 @@ header#navbar .container .navbar-header .navbar-site a.navbar-brand {
   text-transform: uppercase;
 }
 header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-name {
-  width: 22%;
+  width: 31%;
   font-family: 'HalisGrotesqueBold', sans-serif;
 }
 header#navbar .container .navbar-header .navbar-site a.navbar-brand.site-lead {
   position: relative;
   margin: 0 0 0 -4px;
-  width: 78%;
+  width: 69%;
   font-family: 'HalisGrotesqueLight', sans-serif;
   max-width: 100%;
 }
