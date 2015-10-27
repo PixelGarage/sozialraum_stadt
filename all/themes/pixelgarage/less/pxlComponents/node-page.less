@@ -142,6 +142,38 @@
   div.col-sm-12 {
     width: 100%;
 
+    ul.nav-tabs {
+      margin: 0;
+      border: none;
+
+      li {
+        padding: 5px 20px 0 0;
+
+        a {
+          padding: 0;
+          font-family: @pxl-text-font-bold;
+          #pxl-mixins.font-size-responsive(16px, 20px);
+          text-transform: uppercase;
+          text-decoration: none;
+          color: @text-color;
+          border: none;
+        }
+
+        &:hover, &.active, &:focus {
+          a {
+            padding: 0;
+            text-decoration: underline;
+            background: transparent none;
+          }
+        }
+
+      }
+    }
+
+    .tab-content {
+      padding: 10px 0 0;
+    }
+
     .field-name-title {
       h2 {
         margin-top: 0;
@@ -152,7 +184,8 @@
       }
     }
 
-    .field-name-body {
+    .field-name-body,
+    .field-name-field-infos {
       #pxl-mixins.wysiwyg-body();
     }
 

@@ -87,14 +87,16 @@
           </a>
         <?php endif; ?>
 
-        <?php if (!empty($site_name)): ?>
-          <a class="site-name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-        <?php endif; ?>
-
-        <?php if (!empty($site_slogan)): ?>
-          <a class="site-lead navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <span class="slogan"><?php print $site_slogan; ?></span>
-            <span class="date"> 26. Mai 2016</span>
+        <?php if (!empty($site_name) || !empty($site_slogan)): ?>
+          <a class="navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <div class="site-title">
+              <span class="site-name"><?php print $site_name; ?></span>
+              <span class="site-lead"><?php print $site_slogan; ?></span>
+            </div>
+            <div class="site-info">
+              <span class="location">Volkshaus Zürich, </span>
+              <span class="date"> 26. Mai 2016</span>
+            </div>
           </a>
         <?php endif; ?>
       </div>

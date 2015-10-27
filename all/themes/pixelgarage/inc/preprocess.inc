@@ -47,7 +47,7 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 
     } else if ($view->name == "praxisdialoge") {
       $vars['first_column'][$id] = ' ';
-      $vars['panel_open'][$id] = ($id == 0);
+      $vars['panel_open'][$id] = false;
 
     }
   }

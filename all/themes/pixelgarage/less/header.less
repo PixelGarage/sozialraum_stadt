@@ -124,20 +124,19 @@ header#navbar {
         margin: 0;
         padding: 0 @grid-gutter-width;
         height: @pxl-brand-height-small;
-        white-space: nowrap;
         background-color: #fff;
 
         &:hover {
-          background-color: @pxl-color-pfirsich;
+          background-color: @pxl-color-blau;
 
           a.navbar-brand {
-            color: @pxl-color-braun;
+            color: #fff;
           }
         }
 
         a.navbar-brand {
-          display: inline-block;
           float: none;
+          white-space: nowrap;
           margin: 0;
           padding: 0;
           height: auto;
@@ -146,29 +145,43 @@ header#navbar {
           line-height: @pxl-brand-height-small;
           text-transform: uppercase;
 
-          &.site-name {
-            width: 31%;
-            font-family: @pxl-text-font-bold;
-          }
-
-          &.site-lead {
-            position: relative;
-            margin: 0 0 0 -4px;
+          .site-title {
+            display: inline-block;
             width: 69%;
-            font-family: @pxl-text-font;
-            max-width: 100%;
 
-            &:before {
-              content: "-";
-              padding: 0 0.3vw;
+            .site-name {
+              font-family: @pxl-text-font-bold;
             }
 
-            span.date {
+            .site-lead {
+              font-family: @pxl-text-font;
+              max-width: 100%;
+
+              &:before {
+                content: " ";
+                padding: 0 0.3vw;
+              }
+            }
+          }
+
+          .site-info {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            margin: 0 0 0 -4px;
+            width: 31%;
+
+            .location {
+              display: none;
+            }
+
+            .date {
               position: absolute;
               right: 0;
               top: 0;
             }
           }
+
         }
 
         @media @tablet {
@@ -176,7 +189,7 @@ header#navbar {
           padding: 0 @grid-gutter-width/2;
 
           a.navbar-brand {
-            font-size: 17px;
+            font-size: 20px;
           }
 
           // main page with higher brand box
@@ -186,27 +199,42 @@ header#navbar {
             white-space: normal;
 
             a.navbar-brand {
-              display: block;
-              width: auto;
-
-              &.site-name {
-                font-size: 30px;
+              .site-title {
+                display: block;
+                width: auto;
                 border-bottom: 2px solid @text-color;
-              }
-              &.site-lead {
-                margin: 0;
-                font-size: 25px;
 
-                &:before {
-                  content: "";
-                  padding: 0;
+                .site-name {
+                  font-size: 30px;
+                }
+
+                .site-lead {
+                  max-width: 100%;
+                  margin: 0;
+                  font-family: @pxl-text-font-bold;
+                  font-size: 30px;
+                }
+              }
+
+              .site-info {
+                display: block;
+                margin: 0;
+                width: auto;
+
+                .location {
+                  display: inline-block;
+                }
+
+                .date {
+                  display: inline-block;
+                  position: relative;
                 }
               }
             }
 
             &:hover {
-              a.navbar-brand.site-name {
-                border-bottom: 2px solid @pxl-color-braun;
+              a.navbar-brand .site-title {
+                border-bottom: 2px solid #fff;
               }
             }
 
