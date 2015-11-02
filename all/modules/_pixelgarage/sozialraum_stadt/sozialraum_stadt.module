@@ -44,7 +44,8 @@ function _webform_select_options_entities ($component, $flat, $arguments) {
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', $arguments[0])
-    ->propertyCondition('status', 1);
+    ->propertyCondition('status', 1)
+    ->fieldOrderBy('field_sortierung', 'value', 'ASC');
   $result = $query->execute();
 
   if (isset($result['node'])) {
