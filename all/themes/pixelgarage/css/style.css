@@ -8991,6 +8991,9 @@ form#user-login {
 .node-page.view-mode-anmeldung div.col-sm-12 .field-name-title {
   display: none;
 }
+.node-page.view-mode-anmeldung div.col-sm-12 .field-name-body {
+  margin-bottom: 20px;
+}
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component {
   margin: 0 auto 0.8em;
   padding: 0;
@@ -9243,6 +9246,9 @@ form#user-login {
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form div.form-actions button.webform-submit:focus {
   color: #f59878;
   background: #823444;
+}
+.webform-confirmation {
+  margin: 0 0 20px;
 }
 /*
  *  Node page component
