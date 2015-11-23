@@ -92,8 +92,12 @@
         max-width: @webform-max-width;
         background-color: #fff;
 
-        label {
+        label.control-label {
           .form-label;
+
+          .form-required {
+            display: none;
+          }
         }
 
         div.description {

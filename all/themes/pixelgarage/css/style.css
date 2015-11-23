@@ -9000,7 +9000,7 @@ form#user-login {
   max-width: 100%;
   background-color: #fff;
 }
-.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label.control-label {
   padding: 0;
   width: auto;
   font-family: 'HalisGrotesqueBold', sans-serif;
@@ -9011,17 +9011,20 @@ form#user-login {
   color: #193444;
 }
 @media screen and (min-width: 480px) {
-  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label.control-label {
     font-size: 2.8vw;
   }
 }
 @media screen and (min-width: 630px) {
-  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label {
+  .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label.control-label {
     font-size: 17px;
   }
 }
-.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label span.form-required {
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label.control-label span.form-required {
   color: #193444;
+}
+.node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component label.control-label .form-required {
+  display: none;
 }
 .node-page.view-mode-anmeldung div.col-sm-12 form.webform-client-form .webform-component div.description {
   display: block;
@@ -9290,6 +9293,7 @@ form#user-login {
 .node-page div.col-sm-12 ul.nav-tabs li:focus a {
   padding: 0;
   text-decoration: underline;
+  color: #f59878;
   background: transparent none;
 }
 .node-page div.col-sm-12 .tab-content {
