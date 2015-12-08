@@ -9270,31 +9270,36 @@ form#user-login {
   padding: 5px 20px 0 0;
 }
 .node-page div.col-sm-12 ul.nav-tabs li a {
-  padding: 0;
+  padding: 7px 15px;
+  width: 100%;
+  height: 100%;
   font-family: 'HalisGrotesqueBold', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
+  text-align: center;
   text-decoration: none;
-  color: #193444;
+  color: #fff;
   border: none;
+  border-radius: 0;
+  background-color: #193444;
+  outline: none;
 }
 @media screen and (min-width: 480px) {
   .node-page div.col-sm-12 ul.nav-tabs li a {
-    font-size: 3.33333333vw;
+    font-size: 2.66666667vw;
   }
 }
 @media screen and (min-width: 630px) {
   .node-page div.col-sm-12 ul.nav-tabs li a {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 .node-page div.col-sm-12 ul.nav-tabs li:hover a,
 .node-page div.col-sm-12 ul.nav-tabs li.active a,
 .node-page div.col-sm-12 ul.nav-tabs li:focus a {
-  padding: 0;
-  text-decoration: underline;
-  color: #f59878;
-  background: transparent none;
+  color: #823444;
+  background-color: #f59878;
+  outline: none;
 }
 .node-page div.col-sm-12 .tab-content {
   padding: 10px 0 0;
