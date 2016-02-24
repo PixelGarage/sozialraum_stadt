@@ -19,91 +19,29 @@ class dsNodeTests extends dsBaseTest {
   }
 
   /**
-   * Utility function to setup for all kinds of tests.
-   *
-   * @param $label
-   *   How the body label must be set.
-   */
-  function entitiesTestSetup($label = 'above') {
-
-    // Create a node.
-    $settings = array('type' => 'article', 'promote' => 1);
-    $node = $this->drupalCreateNode($settings);
-
-    // Create field CSS classes.
-    $edit = array('ds_classes_fields' => "test_field_class\ntest_field_class_2|Field class 2");
-    $this->drupalPost('admin/structure/ds/classes', $edit, t('Save configuration'));
-
-    // Create a token and php field.
-    $token_field = array(
-      'name' => 'Token field',
-      'field' => 'token_field',
-      'entities[node]' => '1',
-      'code[value]' => '<div class="token-class">[node:title]</span>',
-      'use_token' => '1',
-    );
-    $php_field = array(
-      'name' => 'PHP field',
-      'field' => 'php_field',
-      'entities[node]' => '1',
-      'code[value]' => "<?php echo 'I am a PHP field'; ?>",
-      'use_token' => '0',
-    );
-    $this->dsCreateCodeField($token_field);
-    $this->dsCreateCodeField($php_field);
-
-    // Select layout.
-    $this->dsSelectLayout();
-
-    // Configure fields.
-    $fields = array(
-      'fields[token_field][region]' => 'header',
-      'fields[php_field][region]' => 'left',
-      'fields[body][region]' => 'right',
-      'fields[node_link][region]' => 'footer',
-      'fields[body][label]' => $label,
-      'fields[submitted_by][region]' => 'header',
-    );
-    $this->dsConfigureUI($fields);
-
-    return $node;
-  }
-
-  /**
-   * Utility function to clear field settings.
-   */
-  function entitiesClearFieldSettings() {
-    db_query('TRUNCATE {ds_field_settings}');
-    cache_clear_all('ds_fields:', 'cache', TRUE);
-    cache_clear_all('ds_field_settings', 'cache');
-  }
-
-  /**
-   * Set the label.
-   */
-  function entitiesSetLabelClass($label, $text = '', $class = '', $hide_colon = FALSE) {
-    $edit = array(
-      'fields[body][label]' => $label,
-    );
-    if (!empty($text)) {
-      $edit['fields[body][settings_edit_form][settings][ft][lb]'] = $text;
-    }
-    if (!empty($class)) {
-      $edit['fields[body][settings_edit_form][settings][ft][classes][]'] = $class;
-    }
-    if ($hide_colon) {
-      $edit['fields[body][settings_edit_form][settings][ft][lb-col]'] = '1';
-    }
-    $this->dsEditFormatterSettings($edit);
-  }
-
-  /**
    * Test basic node display fields.
    */
   function testDSNodeEntity() {
 
     $node = $this->entitiesTestSetup();
     $node_author = user_load($node->uid);
+
+    // Test theme_hook_suggestions in ds_entity_variables().
+    $this->drupalGet('node/' . $node->nid, array('query' => array('store' => 1)));
+    $cache = cache_get('ds_test');
+    $this->assertTrue(!empty($cache));
+    $hook_suggestions = $cache->data['theme_hook_suggestions'];
+    $expected_hook_suggestions = array(
+      'node__article',
+      'node__1',
+      'ds_2col_stacked',
+      'ds_2col_stacked__node',
+      'ds_2col_stacked__node_full',
+      'ds_2col_stacked__node_article',
+      'ds_2col_stacked__node_article_full',
+      'ds_2col_stacked__node__1'
+    );
+    $this->assertEqual($hook_suggestions, $expected_hook_suggestions);
 
     // Look at node and verify token and block field.
     $this->drupalGet('node/' . $node->nid);
@@ -295,6 +233,57 @@ class dsNodeTests extends dsBaseTest {
     $this->drupalPost('node/' . $node->nid . '/edit', $edit, t('Save'));
     $this->drupalGet('node/' . $node->nid);
     $this->assertRaw('<h2>Hi, I am an article &lt;script&gt;alert(&#039;with a javascript tag in the title&#039;);&lt;/script&gt;</h2>');
+  }
+
+  /**
+   * Utility function to setup for all kinds of tests.
+   *
+   * @param $label
+   *   How the body label must be set.
+   */
+  function entitiesTestSetup($label = 'above') {
+
+    // Create a node.
+    $settings = array('type' => 'article', 'promote' => 1);
+    $node = $this->drupalCreateNode($settings);
+
+    // Create field CSS classes.
+    $edit = array('ds_classes_fields' => "test_field_class\ntest_field_class_2|Field class 2");
+    $this->drupalPost('admin/structure/ds/classes', $edit, t('Save configuration'));
+
+    // Create a token and php field.
+    $token_field = array(
+      'name' => 'Token field',
+      'field' => 'token_field',
+      'entities[node]' => '1',
+      'code[value]' => '<div class="token-class">[node:title]</span>',
+      'use_token' => '1',
+    );
+    $php_field = array(
+      'name' => 'PHP field',
+      'field' => 'php_field',
+      'entities[node]' => '1',
+      'code[value]' => "<?php echo 'I am a PHP field'; ?>",
+      'use_token' => '0',
+    );
+    $this->dsCreateCodeField($token_field);
+    $this->dsCreateCodeField($php_field);
+
+    // Select layout.
+    $this->dsSelectLayout();
+
+    // Configure fields.
+    $fields = array(
+      'fields[token_field][region]' => 'header',
+      'fields[php_field][region]' => 'left',
+      'fields[body][region]' => 'right',
+      'fields[node_link][region]' => 'footer',
+      'fields[body][label]' => $label,
+      'fields[submitted_by][region]' => 'header',
+    );
+    $this->dsConfigureUI($fields);
+
+    return $node;
   }
 
   /**
@@ -677,5 +666,33 @@ class dsNodeTests extends dsBaseTest {
     $this->drupalGet('node/' . $node->nid);
     $this->assertRaw("<div class=\"group-right\">
     Testing field output through custom function  </div>");
+  }
+
+  /**
+   * Set the label.
+   */
+  function entitiesSetLabelClass($label, $text = '', $class = '', $hide_colon = FALSE) {
+    $edit = array(
+      'fields[body][label]' => $label,
+    );
+    if (!empty($text)) {
+      $edit['fields[body][settings_edit_form][settings][ft][lb]'] = $text;
+    }
+    if (!empty($class)) {
+      $edit['fields[body][settings_edit_form][settings][ft][classes][]'] = $class;
+    }
+    if ($hide_colon) {
+      $edit['fields[body][settings_edit_form][settings][ft][lb-col]'] = '1';
+    }
+    $this->dsEditFormatterSettings($edit);
+  }
+
+  /**
+   * Utility function to clear field settings.
+   */
+  function entitiesClearFieldSettings() {
+    db_query('TRUNCATE {ds_field_settings}');
+    cache_clear_all('ds_fields:', 'cache', TRUE);
+    cache_clear_all('ds_field_settings', 'cache');
   }
 }

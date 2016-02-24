@@ -34,6 +34,34 @@ class metatag_views_plugin_display_extender_metatags extends views_plugin_displa
   }
 
   /**
+   * Identify whether or not the current display has custom meta tags defined.
+   */
+  protected function has_metatags() {
+    $metatags = $this->get_metatags();
+    return !empty($metatags[LANGUAGE_NONE]);
+  }
+
+  /**
+   * Get the Metatag configuration for this display.
+   *
+   * @return array
+   *   The meta tag values, keys by language (default LANGUAGE_NONE).
+   */
+  private function get_metatags() {
+    $metatags = $this->display->get_option('metatags');
+
+    // Leave some possibility for future versions to support translation.
+    if (empty($metatags)) {
+      $metatags = array(LANGUAGE_NONE => array());
+    }
+    if (!isset($metatags[LANGUAGE_NONE])) {
+      $metatags = array(LANGUAGE_NONE => $metatags);
+    }
+
+    return $metatags;
+  }
+
+  /**
    * Defines the form.
    */
   function options_form(&$form, &$form_state) {
@@ -66,34 +94,11 @@ class metatag_views_plugin_display_extender_metatags extends views_plugin_displa
       }
 
       $this->display->set_option('metatags', $metatags);
+
+      // Update the i18n strings.
+      if (!empty($metatags[LANGUAGE_NONE]) && $this->definition['enabled'] && module_exists('i18n_string') && !variable_get('metatag_i18n_disabled', FALSE)) {
+        metatag_translations_update($metatags[LANGUAGE_NONE], 'metatag_views:' . $this->view->name . '_' . $this->display->plugin_name);
+      }
     }
-  }
-
-  /**
-   * Identify whether or not the current display has custom meta tags defined.
-   */
-  protected function has_metatags() {
-    $metatags = $this->get_metatags();
-    return !empty($metatags[LANGUAGE_NONE]);
-  }
-
-  /**
-   * Get the Metatag configuration for this display.
-   *
-   * @return array
-   *   The meta tag values, keys by language (default LANGUAGE_NONE).
-   */
-  private function get_metatags() {
-    $metatags = $this->display->get_option('metatags');
-
-    // Leave some possibility for future versions to support translation.
-    if (empty($metatags)) {
-      $metatags = array(LANGUAGE_NONE => array());
-    }
-    if (!isset($metatags[LANGUAGE_NONE])) {
-      $metatags = array(LANGUAGE_NONE => $metatags);
-    }
-
-    return $metatags;
   }
 }
